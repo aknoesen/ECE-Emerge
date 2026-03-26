@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab8Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:INA125\_complete}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}
+  	\ctikzset{muxdemux/outer label font={\tiny\ttfamily\color{blue}}}
+  	\tikzset{myICwl/.style={muxdemux,
+  			muxdemux def={Lh=12, Rh=12, w=4,square pins=1,
+  				NR=7, NL=6, NB=1, NT=2,},
+  			muxdemux label={
+  				L1=Vref2.5,
+  				L2=VrefOut,
+  				L3=Vin+,
+  				L4=Rg, 
+  				L5=Rg, 
+  				L6=Vin-,
+  				R1=Vref 10, 
+  				R2=Vref 5,
+  				R3=Vref BG,
+  				R4=Vref COM, 
+  				R5=IAref,
+  				R6=Sense,
+  				R7=Vo,
+  				T1=V+,
+  				T2=$\overline{\text{Sleep}}$, % ADDED BAR HERE
+  				B1=V-,
+  				LU1=14, LU2=4,LU3=6, LU4=8, LU5=9,LU6=7,
+  				RU1=16, RU2=15, RU3=13, RU4=12,RU5=5,RU6=11,RU7=10,
+  				TL1=1,TR2=2,
+  				BL1=3,
+  				N=INA125}
+  			,}
+  	}
+  	
+  	% Main IC Node
+  	\draw (7, -2) node[myICwl] (IC) {} ;
+  	
+  	% PIN 3 CONNECTION (REMAINING AT HALFWAY POINT)
+  	\draw (IC.bpin 1) -- ++(0,-0.75) coordinate(cap_junction) 
+  	-- ++(0,-0.75) node[anchor=north] {$-5V$};
+  	
+  	\draw (cap_junction) to[short,*-] ++(-1,0) to[C, l_=$0.1\mu F$] ++(0,-1) node[ground]{};
+  	
+  	% --- Rest of the circuit ---
+  	\draw (6-0.1,0.8)  to[short,-] ++ (-6+0.1,0) to[short,-] ++ (0,-0.5);
+  	\draw (6-0.1,-0.32)  to[short,-] ++ (-1+0.1,0) to[short,-*] ++ (0,+1.1);
+  	\draw (6-0.1,-1.44)  to[short,-] ++ (-2+0.1,0) to[short,-] ++ (0,-0.55) to[short,-] ++ (-2,0);
+  	\draw (6-0.1,-2.56)   
+  	to[R] ++(-2,0) to[short,-] coordinate(A) ++ (0,-1.13) to[vR] ++(+2,0) ;
+  	\draw(6-1,-4.3)  node {$100\Omega$};
+  	\draw(6-1.25,-2.1)  node {$R_f$};
+  	\draw (3.89,-3.7) to[short,*-] ++ (0,-0.389) to[short,-] ++ (0.834,0)  ;
+  	
+  	\draw (6-0.1,-4.8)  to[short,-] ++ (-2+0.1,0) to[short,-] ++ (0,-0.55) to[short,-] ++ (-7,0) to[short,-] ++ (0,3.37) to[short,-] ++ (+1,0);
+  	
+  	\draw (8.4,-2)  node[ground]{} ;
+  	\draw (8.4,-2.95)  node[ground]{} ;  
+  	\draw (8.4,-2.95-0.97)  to[short,-] ++ (0.5,0)  to[short,-*] ++ (0,-0.97)  ;
+  	
+  	\draw (8.4,-2.95-0.97-0.96)  to[short,-] ++ (0.5,0)  to[R, l=$1 k\Omega$] ++ (0,-2) node[ground]{} ;
+  	\draw (8.4,-2.95-0.97-0.96)  to[short,-o] ++ (1,0) node[anchor=west]  {$V_{out}$} ;
+  	
+  	\draw (7-0.56,1.5)  to[short,-*] ++ (0,2) node[anchor=east]  {$+5V$};
+  	\draw (7+0.56,1.6)  to[short,-] ++ (0,1) to[short,-*] ++ (-2*0.56,0)  
+  	to[short,-] ++ (-2,0) to[C, l=$0.1 \mu F$] ++ (0,-1)  node[ground]{}; 
+  	
+  	\draw (0,0) to[short, -] ++(0,+0.5) node[anchor=east]  {$V_\text{ref}$} ;
+  	\draw (0,0)        
+  	to[R, *-*] ++ (-2,-2)  node[anchor=south] {$V_1$} 
+  	to[R, -*] ++ (2,-2) ; 
+  	\draw (0,0)    
+  	to[R, -*] ++ (2,-2)  node[anchor=south] {$V_2$} 
+  	to[R, -*] ++ (-2,-2) node[ground]{} ; 
+  	\draw(-2, -0.8) node {$R_1 - \delta R$};
+  	\draw(2, -0.8) node {$R_1 + \delta R$};
+  	\draw(-2, -0.8-2.5) node {$R_1 + \delta R$};
+  	\draw(2, -0.8-2.55) node {$R_1 - \delta R$};
+  	
+  \end{circuitikz}
+  \caption{Complete INA125 instrumentation amplifier circuit with load cell interface. The gain is set by the resistance between pins 8 and 9.}
+\end{figure}
+
+\end{document}

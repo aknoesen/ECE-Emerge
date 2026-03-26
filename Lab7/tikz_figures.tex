@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab7Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:non-inverting-amp}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,-2) node[ground]{} to[sinusoidal voltage source] ++ (0,2) to[short, o-] ++ (0.25,0) node[above] {$3$}
+  			node[op amp, noinv input down, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -o] ++(1.5,0) node[right]{$\text{V}_{\text{out}}$}
+  			(OA.-) node[below] {$2$} to[short,-] ++(-0.5,0) coordinate(t1) to[short,*-] ++(0,+1) to[R=$1 \text{ k}\Omega$, -] ++(3.5,0)
+  			to[short,-*] ++(0,-1.5) to[R=$10 \text{ k}\Omega$] ++(0,-2.5) node[ground]{}
+  			(t1) to[R=$1 \text{ k}\Omega$] ++(-2,0) node[ground]{};
+  		\end{circuitikz}
+  \caption{Non-inverting amplifier with gain of 2. The 1~k$\Omega$ feedback and 1~k$\Omega$ ground resistors set the closed-loop gain to $1 + R_f/R_1 = 2$. The 10~k$\Omega$ resistor is the output load.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:inverting-amp}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) node[ground]{} to[short,-] ++ (0.25,0) node[above] {$3$}
+  			node[op amp, noinv input down, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -*] ++(1.5,0) coordinate(Out1) to[short, -*] ++(2,0) coordinate(Out2) to[short, -o] ++(0.5,0) node[right]{$\text{V}_{\text{out}}$}
+  			(OA.-) node[below] {$2$} to[short,] ++(0,+1) to[R=$4.7 \text{ k}\Omega$, -] ++(2.75,0) to[short, -*] ++(0,-1.5);
+  			\draw (-3.5,-1) node[ground]{} to[sinusoidal voltage source] ++ (0,+2)
+  			to[short,-] ++(0.5,0) coordinate(NonInv) to[R=$1 \text{ k}\Omega$, -*] ++(3.25,0)
+  			(Out2) to[oscope=$\text{CH1}$, -] ++(0,-2.5) node[ground]{}
+  			(Out1) to[R=$10 \text{ k}\Omega$] ++(0,-2.5) node[ground]{}
+  			(NonInv) ++(0.5,0) node[above] {$\text{V}_{\text{in}}$} to[oscope=$\text{CH2}$, *-] ++(0,-2) node[ground]{};
+  		\end{circuitikz}
+  \caption{Inverting amplifier configuration with gain of $-R_f/R_{\text{in}} = -4.7\text{ k}\Omega / 1\text{ k}\Omega = -4.7$. The 10~k$\Omega$ resistor is the output load.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:summing-amp}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) node[ground]{} to[short,-] ++ (0.25,0) node[above] {$3$}
+  			node[op amp, noinv input down, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -o] ++(0.75,0) node[right]{$\text{V}_{\text{out}}$}
+  			(OA.-) node[below] {$2$} to[short,*-] ++(0,+1) to[R=$4.7 \text{ k}\Omega$, -] ++(2.75,0)
+  			to[short,-*] ++(0,-1.5) to[R=$10 \text{ k}\Omega$] ++(0,-2.5) node[ground]{};
+  			\draw (-4.5,-1) node[ground]{} to[sinusoidal voltage source] ++ (0,+2) coordinate(W1)
+  			to[short,-o] ++(1,0) coordinate(Vin1)
+  			to[R=$1 \text{ k}\Omega$, -*] ++(2.75,0) coordinate(Sum) to[short,] ++(0,+3.5)
+  			to[R=$4.7 \text{ k}\Omega$, -] ++(-2.75,0) coordinate(Vin2) to[short,o-] ++(-1,0) to[voltage source] ++ (0,-2) coordinate(W2) node[ground]{}
+  			(W2) ++(-0.5,+1) node[left] {$\text{W2}$}
+  			(W1) ++(-0.5,-1) node[left] {$\text{W1}$}
+  			(Vin1) node[above] {$\text{V}_{\text{in1}}$}
+  			(Vin2) node[above] {$\text{V}_{\text{in2}}$}
+  			(Sum) to[short,] ++(1,0);
+  		\end{circuitikz}
+  \caption{Inverting summing amplifier configuration. Signal W1 is amplified by $-R_f/R_1 = -4.7$ and signal W2 by $-R_f/R_2 = -1$, giving $V_{\text{out}} = -4.7\,V_{\text{in1}} - V_{\text{in2}}$. The 10~k$\Omega$ resistor is the output load.}
+\end{figure}
+
+\end{document}

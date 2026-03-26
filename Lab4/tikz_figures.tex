@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab4Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:cl-circuit}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) to[square voltage source] ++ (0,+2)
+  			to[short,-] ++ (1,0)
+  			to[R=$R$] ++(2,-0) coordinate(A)
+  			to[short,-] ++ (1,0)
+  			to[C=$C$] ++(0,-2)
+  			to[short,-] ++ (-1,0)
+  			to[short,-] ++ (-3,0);
+  		\end{circuitikz}
+  \caption{Series RC circuit.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:rl-setup}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (-4,0) to[square voltage source] ++ (0,+2)
+  			to[R=$R_G$] ++(2,0)
+  			to[L=$1 \text{ mH}$,*-] ++(3,-0) to[R=$R_L$] ++(2,0)
+  			to[short,-o] ++ (2,0)
+  			to[R=$100\,\Omega$] ++(0,-2)
+  			to[short,-] ++ (-1,0)
+  			to[short,-*] ++ (-2.0,0) node[ground]{} to[short,-*] ++ (-4,0)
+  			to[short,-] ++(-2,0);
+  			\draw (5,0) to[short, *-] ++(2,0)
+  			to[oscope] ++(0,2) to[short, -*] ++(-2,0);
+  			\draw (-2,2)
+  			to[oscope] ++(0,-2);
+  		\end{circuitikz}
+  \caption{RL circuit experimental setup. The generator internal resistance $R_G \approx 50\,\Omega$. The three resistances $R_G$, $R_L$, and 100\,$\Omega$ all contribute to the effective total resistance and therefore to the RL time constant.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:prelab-rc}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) to[square voltage source, l=$4\,\text{V}_\text{pp}$] ++ (0,+2)
+  			to[short,-] ++ (1,0)
+  			to[R=$2.2\,\text{k}\Omega$] ++(2,-0) coordinate(A)
+  			to[short] ++ (1,0)
+  			to[C=$1\,\mu\text{F}$] ++(0,-2)
+  			to[short,-] ++ (-1,0)
+  			to[short,-*] ++ (-1.0,0) node[ground]{} to[short,-] ++ (-2,0);
+  			\node[anchor=east] at (4.7,2) {$V_o$};
+  		\end{circuitikz}
+  \caption{RC circuit for prelab analysis.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:prelab-rl}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) to[square voltage source, l=$4\,\text{V}_\text{pp}$] ++ (0,+2)
+  			to[short,-] ++ (1,0)
+  			to[L=$1\,\text{mH}$] ++(2,-0) to[R=$R_L$] ++(2,0)
+  			to[short,-, i_=$ $] ++ (1,0)
+  			to[R=$100\,\Omega$] ++(0,-2)
+  			to[short,-] ++ (-1,0)
+  			to[short,-*] ++ (-2.0,0) node[ground]{} to[short,-] ++ (-3,0);
+  			\node[anchor=east] at (6,2.4) {$I_L$};
+  		\end{circuitikz}
+  \caption{RL circuit for prelab analysis. $R_L \approx 100\,\Omega$.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:rc-setup}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (-2,0) to[square voltage source] ++(0,+2)
+  				to[R=$R_G$] ++(2,0)
+  				to[short,-*] ++(0.5,0)
+  				to[short,-] ++(0.5,0);
+  				\draw (-1+2,2) to[R=$2.2~\text{k}\Omega$] ++(2,0)
+  				to[short,-o] ++(1,0)
+  				to[C=$1~\mu\text{F}$] ++(0,-2)
+  				to[short,-] ++(-1,0)
+  				to[short,-*] ++(-1.0,0) node[ground]{}
+  				to[short,-] ++(-4,0);
+  				\draw (4,0) to[short,*-] ++(2,0)
+  				to[oscope] ++(0,2)
+  				to[short,-*] ++(-2,0);
+  				\draw (0.5,2) to[oscope,-*] ++(0,-2);
+  			\end{circuitikz}
+  \caption{RC circuit experimental setup. The signal generator has an internal resistance of approximately $R_G = 50~\Omega$. Since this internal resistance is approximately 2\% of the $2.2~\text{k}\Omega$ series resistance in the circuit, its contribution to the overall time constant is negligible and can be disregarded. Contrast this with the RL experiment, where $R_G$ cannot be ignored. See Section~5.6 of \href{https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing}{\textbf{ECE Confidential: Cracking the Code}}.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:rl-setup1}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (2,2) to[L=$1~\text{mH}$,*-] ++(3,0)
+  				to[R=$R_L$] ++(2,0)
+  				to[short,-] ++(1,0)
+  				to[R=$100~\Omega$] ++(0,-2)
+  				to[short,-] ++(-1,0)
+  				to[short,-*] ++(-5.0,0);
+  			\end{circuitikz}
+  \caption{Circuit for measuring the total series resistance $R_\text{total} = R_L + R$. Connect the DMM across the two open terminals. Use the measured value in all subsequent calculations.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:rl-setup}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (-4,0) to[square voltage source] ++(0,+2)
+  				to[R=$R_G$] ++(2,0)
+  				to[L=$1~\text{mH}$,*-] ++(3,0)
+  				to[R=$R_L$] ++(2,0)
+  				to[short,-o] ++(2,0)
+  				to[R=$100~\Omega$] ++(0,-2)
+  				to[short,-] ++(-1,0)
+  				to[short,-*] ++(-2.0,0) node[ground]{}
+  				to[short,-*] ++(-4,0)
+  				to[short,-] ++(-2,0);
+  				\draw (5,0) to[short,*-] ++(2,0)
+  				to[oscope] ++(0,2)
+  				to[short,-*] ++(-2,0);
+  				\draw (-2,2) to[oscope] ++(0,-2);
+  			\end{circuitikz}
+  \caption{RL circuit experimental setup. The generator has an internal resistance $R_G \approx 50~\Omega$. All three resistances, $R_G$, $R_L$, and the $100~\Omega$ sense resistor, contribute to the RL time constant; see Deliverable~2a for the full calculation.}
+\end{figure}
+
+\end{document}

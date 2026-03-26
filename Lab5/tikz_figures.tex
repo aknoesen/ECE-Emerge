@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab5Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{(unlabelled \#1)}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  					\draw (0,0) node[ground]{}
+  					to[sinusoidal voltage source, l=$V_{in}$] ++(0,3)
+  					to[R, l=$R$] ++(3,0)
+  					to[C] ++(0,-3) node[ground]{};
+  					\draw (3,3) to[short, -o] ++(0.5,0)
+  					node[right] {$V_{out}$};
+  				\end{circuitikz}
+  \caption{Circuit~1} \end{subfigure} \hfill \begin{subfigure}{0.4\textwidth} \centering \savebox{\rcfiltertwobox}{% \begin{circuitikz}[american] \draw (0,0) node[ground]{} to[sinusoidal voltage source, l=$V_{in}$] ++(0,3) to[C] ++(3,0) to[R, l=$R$] ++(0,-3) node[ground]{}; \draw (3,3) to[short, -o] ++(0.5,0) node[right] {$V_{out}$}; \end{circuitikz}% } \pdftooltip{\usebox{\rcfiltertwobox}}{Series RC circuit: Vin through C then R to ground; Vout taken across R. High-pass filter.} \caption{Circuit~2} \end{subfigure} \caption{RC Filter Circuits}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:lp-circuit}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (-2,0)
+  				to[sinusoidal voltage source, l=$\text{W}_{1}$] ++(0,+2)
+  				to[R=$R_G$] ++(2,0)
+  				to[short,-*] ++(0.5,0)
+  				to[short,-] ++(0.5,0);
+  				\draw (-1+2,2)
+  				to[R=$1\,\text{k}\Omega$] ++(2,0)
+  				to[short,-o] ++(1,0)
+  				to[C=$0.1\,\mu\text{F}$] ++(0,-2)
+  				to[short,-] ++(-1,0)
+  				to[short,-*] ++(-1.0,0) node[ground]{}
+  				to[short,-] ++(-4,0);
+  				\draw (4,0)
+  				to[short,*-] ++(3,0)
+  				to[oscope, l=$\text{Ch2}$] ++(0,2)
+  				to[short,-*] ++(-3,0);
+  				\draw (0.5,2)
+  				to[oscope,-*, l=$\text{Ch1}$] ++(0,-2);
+  			\end{circuitikz}
+  \caption{Connection diagram for low-pass filter measurement. W1 is the sinusoidal source; CH1 measures the input at the node between $R_G$ and the filter; CH2 measures the output across the 0.1\,$\mu$F capacitor.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:hp-circuit}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (-2,0)
+  				to[sinusoidal voltage source, l=$\text{W}_{1}$] ++(0,+2)
+  				to[R=$R_G$] ++(2,0)
+  				to[short,-*] ++(0.5,0)
+  				to[short,-] ++(0.5,0);
+  				\draw (-1+2,2)
+  				to[C=$0.1\,\mu\text{F}$] ++(2,0)
+  				to[short,-o] ++(1,0)
+  				to[R=$1\,\text{k}\Omega$] ++(0,-2)
+  				to[short,-] ++(-1,0)
+  				to[short,-*] ++(-1.0,0) node[ground]{}
+  				to[short,-] ++(-4,0);
+  				\draw (4,0)
+  				to[short,*-] ++(3,0)
+  				to[oscope, l=$\text{Ch2}$] ++(0,2)
+  				to[short,-*] ++(-3,0);
+  				\draw (0.5,2)
+  				to[oscope,-*, l=$\text{Ch1}$] ++(0,-2);
+  			\end{circuitikz}
+  \caption{Connection diagram for high-pass filter measurement. W1 is the sinusoidal source; CH1 measures the input; CH2 measures the output across the 1\,k$\Omega$ resistor.}
+\end{figure}
+
+\end{document}

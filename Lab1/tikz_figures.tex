@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab1Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:SingleMeas1}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\draw (0,3) node[above] {V+}
+  			to[battery1] (0,1.5)
+  			to[short] (0,1.25) node[ground, label={[font=\footnotesize]below:Internal to M2K}] {};
+  			\draw (0,3) to[short, -*] (1,3) node[above] {Ch1+};
+  			\draw (1,3)
+  			to[qvprobe,l=$V_1$, -*] (3,3)
+  			node[right] {Ch1-};
+  			\draw (3,3)
+  			to[short] (3,0.5) node[ground, label={[font=\footnotesize]below:Explicit connection to ground}] {};
+  		\end{circuitikz}
+  \caption{Single sided voltage measurements of the power supplies.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:differential}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american]
+  			\draw (0,3) node[above] {V+}
+  			to[battery1] (0,1.5)
+  			to[short] (0,1.25);
+  			\draw (0,1.25) to[short] (-2,1.25) node[ground, label={[font=\footnotesize]below:Internal in M2K}] {};
+  			\draw (0,1.25)
+  			to[battery1] (0,-1)
+  			node[below] {V-};
+  			\draw (0,3) to[short, -*] (1,3) node[above] {Ch1+};
+  			\draw (1,3)
+  			to[qvprobe,l=$V_1$, -*] (4,3)
+  			node[right] {Ch1-};
+  			\draw (4,3)
+  			to[short] (4,-1)
+  			to[short] (0,-1);
+  			\draw (4,1) to[short, -*] (5,1) node[above] {Ch2+};
+  			\draw (5,1)
+  			to[qvprobe,l=$V_2$, -*] (7.5,1)
+  			node[right] {Ch2-};
+  			\draw (7.5,1)
+  			to[short] (7.5,0.5) node[ground, label={[font=\footnotesize]below:Explicit connection to ground}] {};
+  		\end{circuitikz}
+  \caption{Differential and single-side voltage measurements of the power supplies.}
+\end{figure}
+
+\end{document}

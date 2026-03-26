@@ -1,0 +1,221 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[american voltages, european currents]{circuitikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{parskip}
+
+% -- colors from source file --
+\definecolor{myblue}{RGB}{0,103,172}
+\definecolor{mygray}{RGB}{240,240,240}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{TikZ / CircuitiKZ Figures}}\\[0.4em]
+  {\large\texttt{Lab6Instructions.tex}}
+\end{center}
+\vspace{1em}
+\noindent Edit the TikZ code in this file, then recompile
+with \texttt{pdflatex} to preview changes.  Run
+\texttt{extract\_tikz\_figures.py} to regenerate the PNGs.
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:unity-gain}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (-1,0) coordinate(NonInv) to[short, o-] ++ (2,0) node[above] {$3$}
+  			node[op amp, noinv input up, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -*] ++(1.5,0) coordinate(Out) to[short, -o] ++(1,0) node[right]{$\text{V}_{\text{out}}$}
+  			(OA.-) node[above] {$2$} to[short,] ++(0,-1) to[short,] ++(2.75,0) to[short, -*] ++(0,1.5);
+  			\draw (-3,-2) node[ground]{} to[sinusoidal voltage source] ++ (0,+2) to[short, -*] ++(2.0,0) coordinate(In1)
+  			to[oscope=$\text{CH2}$, -] ++(0,-2) node[ground]{}
+  			(Out) to[oscope=$\text{CH1}$, -] ++(0,-1.5) node[ground]{}
+  			(In1) node[above] {$\text{V}_{\text{in}}$};
+  		\end{circuitikz}
+  \caption{Unity-gain buffer (voltage follower) circuit}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:buffer-example}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\ctikzset{bipoles/oscope/waveform=none}
+  			\draw (0,0) coordinate(NonInv) to[short, *-] ++ (0.5,0) node[above] {$3$}
+  			node[op amp, noinv input down, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -*] ++(1.5,0) coordinate(Out1) to[short, -*] ++(2,0) coordinate(Out2) to[short, -o] ++(0.5,0) node[right]{$\text{V}_{\text{out}}$}
+  			(OA.-) node[below] {$2$} to[short,] ++(0,+1) to[short,] ++(2.75,0) to[short, -*] ++(0,-1.5);
+  			\draw (-4,-2) node[ground]{} to[sinusoidal voltage source] ++ (0,+2)
+  			to[R=$4.7 \text{ k}\Omega$, -*] ++(2,0)
+  			to[R=$4.7 \text{ k}\Omega$] ++(0,-2) node[ground]{}
+  			(Out2) to[oscope=$\text{CH1}$, -] ++(0,-2.5) node[ground]{}
+  			(Out1) to[R=$10 \text{ k}\Omega$] ++(0,-2.5) node[ground]{}
+  			(NonInv) to[oscope=$\text{CH2}$, -] ++(0,-2) node[ground]{}
+  			(NonInv) to[short,] ++(-2,0)
+  			(NonInv) node[above] {$\text{V}_{\text{in}}$};
+  		\end{circuitikz}
+  \caption{Buffer Circuit \#1 with the 10~k$\Omega$ load resistor.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:buffer-example2}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (0,0) coordinate(NonInv) to[short, *-] ++ (0.5,0) node[above] {$3$}
+  				node[op amp, noinv input down, anchor=+](OA){OA}
+  				(OA.out) node[above] {$1$} to[short, -*] ++(1.5,0) coordinate(Out1) to[short, -*] ++(2,0) coordinate(Out2) to[short, -o] ++(0.5,0) node[right]{$\text{V}_{\text{out}}$}
+  				(OA.-) node[below] {$2$} to[short,] ++(0,+1) to[short,] ++(2.75,0) to[short, -*] ++(0,-1.5);
+  				\draw (-4,-2) node[ground]{} to[sinusoidal voltage source] ++ (0,+2)
+  				to[R=$4.7 \text{ k}\Omega$, -*] ++(2,0)
+  				to[R=$4.7 \text{ k}\Omega$] ++(0,-2) node[ground]{}
+  				(Out2) to[oscope=$\text{CH1}$, -] ++(0,-2.5) node[ground]{}
+  				(Out1) to[R=$1 \text{ k}\Omega$] ++(0,-2.5) node[ground]{}
+  				(NonInv) to[oscope=$\text{CH2}$, -] ++(0,-2) node[ground]{}
+  				(NonInv) to[short,] ++(-2,0)
+  				(NonInv) node[above] {$\text{V}_{\text{in}}$};
+  			\end{circuitikz}
+  \caption{Buffer Circuit \#2 with the 1~k$\Omega$ load resistor.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:buffer-example3}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  				\ctikzset{bipoles/oscope/waveform=none}
+  				\draw (1.5,0) coordinate(NonInv) to[short, *-] ++ (0.5,0) node[above] {$3$}
+  				node[op amp, noinv input down, anchor=+](OA){OA}
+  				(OA.out) node[above] {$1$} to[short, -*] ++(1.5,0) coordinate(Out1) to[short, -*] ++(2,0) coordinate(Out2) to[short, -o] ++(0.5,0) node[right]{$\text{V}_{\text{out}}$}
+  				(OA.-) node[below] {$2$} to[short,] ++(0,+1) to[short,] ++(2.75,0) to[short, -*] ++(0,-1.5);
+  				\draw (-4,-2) node[ground]{} to[sinusoidal voltage source] ++ (0,+2)
+  				to[R=$4.7 \text{ k}\Omega$, -*] ++(2,0) coordinate(In1)
+  				to[R=$4.7 \text{ k}\Omega$] ++(0,-2) node[ground]{}
+  				(Out2) to[oscope=$\text{CH2}$, -] ++(0,-2.5) node[ground]{}
+  				(Out1) to[R=$10 \text{ k}\Omega$] ++(0,-2.5) node[ground]{}
+  				(NonInv) to[oscope=$\text{CH1}$, -] ++(0,-2) node[ground]{}
+  				(NonInv) to[short,] ++(-2,0)
+  				(NonInv) node[above] {$\text{V}_{\text{in}}$}
+  				(In1) to[short,] ++(1.65,0) to[R=$1 \text{ k}\Omega$] ++(0,-2) node[ground]{};
+  			\end{circuitikz}
+  \caption{Buffer Circuit \#3 with the 10~k$\Omega$ load resistor and a 1~k$\Omega$ resistor in parallel with the lower 4.7~k$\Omega$ voltage divider resistor.}
+\end{figure}
+
+\clearpage
+
+\noindent\textbf{Label:} \texttt{fig:lm6134-pins2}\\[0.5em]
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american, scale=1]
+  			\draw (0,0) coordinate(NonInv) to[short, o-] ++ (1,0)
+  			node[above] {$3$}
+  			node[op amp, noinv input down, anchor=+](OA){OA}
+  			(OA.out) node[above] {$1$} to[short, -o] ++(0.5,0)
+  			node[right]{$\text{OUT A}$}
+  			(OA.-) node[above] {$2$} to[short, -o] ++(-1,0)
+  			coordinate(Inv)
+  			(OA.up) coordinate(posP)
+  			to[short, -*] ++(0,1.25) coordinate(one)
+  			to[short, -o] ++(0,0.5)
+  			node[left] {$\text{+V}_\text{cc}$}
+  			(one) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(OA.down) coordinate(posN)
+  			to[short, -*] ++(0,-1.25) coordinate(two)
+  			to[short, -o] ++(0,-0.5)
+  			node[left] {$\text{-V}_\text{cc}$}
+  			(two) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(posP) ++(0,0.25) node[right] {$4$}
+  			(posN) ++(0,-0.25) node[right] {$11$}
+  			(NonInv) node[left] {$\text{+IN A}$}
+  			(Inv) node[left] {$\text{-IN A}$};
+  			\draw (7,0) coordinate(NonInv) to[short, o-] ++ (1,0)
+  			node[above] {$5$}
+  			node[op amp, noinv input down, anchor=+](OA){OB}
+  			(OA.out) node[above] {$7$} to[short, -o] ++(0.5,0)
+  			node[right]{$\text{OUT B}$}
+  			(OA.-) node[above] {$6$} to[short, -o] ++(-1,0)
+  			coordinate(Inv)
+  			(OA.up) coordinate(posP)
+  			to[short, -*] ++(0,1.25) coordinate(one)
+  			to[short, -o] ++(0,0.5)
+  			node[left] {$\text{+V}_\text{cc}$}
+  			(one) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(OA.down) coordinate(posN)
+  			to[short, -*] ++(0,-1.25) coordinate(two)
+  			to[short, -o] ++(0,-0.5)
+  			node[left] {$\text{-V}_\text{cc}$}
+  			(two) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(posP) ++(0,0.25) node[right] {$4$}
+  			(posN) ++(0,-0.25) node[right] {$11$}
+  			(NonInv) node[left] {$\text{+IN B}$}
+  			(Inv) node[left] {$\text{-IN B}$};
+  			\draw (0,-6) coordinate(NonInv) to[short, o-] ++ (1,0)
+  			node[above] {$10$}
+  			node[op amp, noinv input down, anchor=+](OA){OC}
+  			(OA.out) node[above] {$8$} to[short, -o] ++(0.5,0)
+  			node[right]{$\text{OUT C}$}
+  			(OA.-) node[above] {$9$} to[short, -o] ++(-1,0)
+  			coordinate(Inv)
+  			(OA.up) coordinate(posP)
+  			to[short, -*] ++(0,1.25) coordinate(one)
+  			to[short, -o] ++(0,0.5)
+  			node[left] {$\text{+V}_\text{cc}$}
+  			(one) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(OA.down) coordinate(posN)
+  			to[short, -*] ++(0,-1.25) coordinate(two)
+  			to[short, -o] ++(0,-0.5)
+  			node[left] {$\text{-V}_\text{cc}$}
+  			(two) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(posP) ++(0,0.25) node[right] {$4$}
+  			(posN) ++(0,-0.25) node[right] {$11$}
+  			(NonInv) node[left] {$\text{+IN C}$}
+  			(Inv) node[left] {$\text{-IN C}$};
+  			\draw (7,-6) coordinate(NonInv) to[short, o-] ++ (1,0)
+  			node[above] {$12$}
+  			node[op amp, noinv input down, anchor=+](OA){OD}
+  			(OA.out) node[above] {$14$} to[short, -o] ++(0.5,0)
+  			node[right]{$\text{OUT D}$}
+  			(OA.-) node[above] {$13$} to[short, -o] ++(-1,0)
+  			coordinate(Inv)
+  			(OA.up) coordinate(posP)
+  			to[short, -*] ++(0,1.25) coordinate(one)
+  			to[short, -o] ++(0,0.5)
+  			node[left] {$\text{+V}_\text{cc}$}
+  			(one) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(OA.down) coordinate(posN)
+  			to[short, -*] ++(0,-1.25) coordinate(two)
+  			to[short, -o] ++(0,-0.5)
+  			node[left] {$\text{-V}_\text{cc}$}
+  			(two) to[curved capacitor=$0.1\,\mu\text{F}$]
+  			++(2,0) node[ground]{}
+  			(posP) ++(0,0.25) node[right] {$4$}
+  			(posN) ++(0,-0.25) node[right] {$11$}
+  			(NonInv) node[left] {$\text{+IN D}$}
+  			(Inv) node[left] {$\text{-IN D}$};
+  		\end{circuitikz}
+  \caption{LM6134 connection diagram. The $0.1\,\mu$F decoupling capacitors are required on every build. Because pins~4 and~11 are shared across all four op-amps, one capacitor pair placed adjacent to the supply pins protects all four amplifiers simultaneously.}
+\end{figure}
+
+\end{document}
