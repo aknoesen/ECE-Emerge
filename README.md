@@ -85,6 +85,28 @@ Change the percentage in the `.md` source and re-run `md2ada.py` to update the H
 
 ---
 
+## Live Web Access
+
+Lab manuals are served via GitHub Pages:
+
+```
+https://andreknoesen.github.io/ECE-Emerge/Lab1/htmlconversion/Lab1Instructions.html
+https://andreknoesen.github.io/ECE-Emerge/Lab2/htmlconversion/Lab2Instructions.html
+...
+https://andreknoesen.github.io/ECE-Emerge/Project/htmlconversion/ECE_Emerge_Project.html
+```
+
+---
+
+## Contributing
+
+Issues and pull request discussions are not monitored on this repository. For questions, corrections, or collaboration inquiries, contact the author directly:
+
+**Andre Knoesen** — [aknoesen@ucdavis.edu](mailto:aknoesen@ucdavis.edu)
+Department of Electrical and Computer Engineering, UC Davis
+
+---
+
 ## License
 
 MIT License. See [LICENSE](LICENSE).
