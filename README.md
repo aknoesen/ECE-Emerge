@@ -89,12 +89,17 @@ Change the percentage in the `.md` source and re-run `md2ada.py` to update the H
 
 Lab manuals are served via GitHub Pages:
 
-```
-https://andreknoesen.github.io/ECE-Emerge/Lab1/htmlconversion/Lab1Instructions.html
-https://andreknoesen.github.io/ECE-Emerge/Lab2/htmlconversion/Lab2Instructions.html
-...
-https://andreknoesen.github.io/ECE-Emerge/Project/htmlconversion/ECE_Emerge_Project.html
-```
+| Manual | Link |
+|---|---|
+| Lab 1 Instructions | [Lab1Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab1/htmlconversion/Lab1Instructions.html) |
+| Lab 2 Instructions | [Lab2Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab2/htmlconversion/Lab2Instructions.html) |
+| Lab 3 Instructions | [Lab3Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab3/htmlconversion/Lab3Instructions.html) |
+| Lab 4 Instructions | [Lab4Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab4/htmlconversion/Lab4Instructions.html) |
+| Lab 5 Instructions | [Lab5Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab5/htmlconversion/Lab5Instructions.html) |
+| Lab 6 Instructions | [Lab6Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab6/htmlconversion/Lab6Instructions.html) |
+| Lab 7 Instructions | [Lab7Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab7/htmlconversion/Lab7Instructions.html) |
+| Lab 8 Instructions | [Lab8Instructions.html](https://andreknoesen.github.io/ECE-Emerge/Lab8/htmlconversion/Lab8Instructions.html) |
+| ECE Emerge Project | [ECE_Emerge_Project.html](https://andreknoesen.github.io/ECE-Emerge/Project/htmlconversion/ECE_Emerge_Project.html) |
 
 ---
 
