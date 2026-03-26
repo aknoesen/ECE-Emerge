@@ -136,7 +136,7 @@ When the M2K is paired with Analog Devices' Scopy™ graphical application softw
 - Two input/output digital trigger signals for connecting multiple instruments (3.3 V CMOS)
 - Digital Bus Analyzers (SPI, I²C, UART, Parallel)
 
-<img src="media/ADALM2000_Overview.png" alt="Block diagram of the ADALM2000 M2K module showing five functional sections stacked vertically. Source section: V-out terminals, plus or minus 5 V, 50 ohms, 12-bit, 150 MSPS DAC with 30 MHz bandwidth. Measure section: V-in terminals, plus or minus 25 V, 1 megaohm in parallel with 30 picofarads, 12-bit, 100 MSPS ADC with 25 MHz bandwidth. Power Supply section: V-plus, V-minus, and GND terminals, 0 to 5 V and negative 5 to 0 V at 50 milliamps. Digital Trigger section: Trigger terminal, 3.3 V and 1.8 V at 10 MSPS, 5 V tolerant. Digital IO section: DIO0 through DIO15 terminals, 3.3 V and 1.8 V at 10 MSPS, 5 V tolerant." style="max-width:35%;" />
+<img src="media/ADALM2000_Overview.png" alt="Block diagram of the ADALM2000 M2K module showing five functional sections stacked vertically. Source section: V-out terminals, plus or minus 5 V, 50 ohms, 12-bit, 150 MSPS DAC with 30 MHz bandwidth. Measure section: V-in terminals, plus or minus 25 V, 1 megaohm in parallel with 30 picofarads, 12-bit, 100 MSPS ADC with 25 MHz bandwidth. Power Supply section: V-plus, V-minus, and GND terminals, 0 to 5 V and negative 5 to 0 V at 50 milliamps. Digital Trigger section: Trigger terminal, 3.3 V and 1.8 V at 10 MSPS, 5 V tolerant. Digital IO section: DIO0 through DIO15 terminals, 3.3 V and 1.8 V at 10 MSPS, 5 V tolerant." style="max-width: 35%; display: block; margin: 0 auto;" />
 
 *Figure 5: The ADALM2000 (M2K) USB module provides five instrument functions in a single device: a dual-channel DAC source, a dual-channel ADC measurement input, a variable power supply, digital trigger I/O, and 16-channel digital I/O, all accessible via the Scopy software interface.*
 
@@ -146,7 +146,7 @@ When the M2K is paired with Analog Devices' Scopy™ graphical application softw
 
 You need to get acquainted with the M2K connections input/outputs. Electrical connectors are categorized by their gender, as illustrated in Figure 6. The M2K unit comes with one 2×15 male connector to which mates a 2×15 female connector.
 
-<img src="media/GenderConnections.png" alt="Diagram showing two electrical connectors side by side with a rightward arrow between them. On the left, a blue male plug labeled Male Plug (Pins) shows a rectangular connector body with multiple protruding metal pins arranged in rows. On the right, a blue female receptacle labeled Female Receptacle (Sockets) shows a matching connector body with recessed sockets designed to receive the pins." style="max-width:35%;" />
+<img src="media/GenderConnections.png" alt="Diagram showing two electrical connectors side by side with a rightward arrow between them. On the left, a blue male plug labeled Male Plug (Pins) shows a rectangular connector body with multiple protruding metal pins arranged in rows. On the right, a blue female receptacle labeled Female Receptacle (Sockets) shows a matching connector body with recessed sockets designed to receive the pins." style="max-width: 35%; display: block; margin: 0 auto;" />
 
 *Figure 6: Terminology analogy: The male connector protruding pins fit into the female connector's recessed sockets, similar to biological mating.*
 
