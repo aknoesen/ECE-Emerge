@@ -31,13 +31,13 @@ The purpose of Lab 6 is to:
 
 ## 1. Prelab Assignment
 
-Before the lab session, read **Appendix A** (Circuit Construction and Debugging) and **Appendix B** (The LM6134 Operational Amplifier). The deliverables below require specific information from both appendices.
+Before the lab session, read **Appendix A** (Circuit Construction and Debugging) and **Appendix B** (The LMC662 Operational Amplifier). The deliverables below require specific information from both appendices.
 
-### 1.1 LM6134 Device Specifications
+### 1.1 LMC662 Device Specifications
 
 > **Prelab Deliverable #1a**
 >
-> Referring to the LM6134 datasheet and Appendix B, complete the table below. For each parameter, record the datasheet value and write one sentence explaining what it means specifically for this lab: not a general definition, but a consequence for something you will build or measure.
+> Referring to the [LMC662 datasheet](https://www.ti.com/lit/ds/symlink/lmc662.pdf) and Appendix B, complete the table below. For each parameter, record the datasheet value and write one sentence explaining what it means specifically for this lab: not a general definition, but a consequence for something you will build or measure.
 >
 > | **Parameter** | **Value** | **Practical meaning for Lab 6** |
 > |---|---|---|
@@ -51,7 +51,7 @@ Before the lab session, read **Appendix A** (Circuit Construction and Debugging)
 
 > **Prelab Deliverable #1b**
 >
-> Using the GBW value you recorded in Deliverable 1a, calculate the maximum closed-loop $-3$ dB bandwidth for the LM6134 at each of the three gains below. Present your results in a table and include the formula used.
+> Using the LMC662 GBW value you recorded in Deliverable 1a, calculate the maximum closed-loop $-3$ dB bandwidth for the  at each of the three gains below. Present your results in a table and include the formula used.
 >
 > | **Closed-loop gain** | **Maximum bandwidth (Hz)** |
 > |---|---|
@@ -74,7 +74,7 @@ Before the lab session, read **Appendix A** (Circuit Construction and Debugging)
 
 > **Prelab Deliverable #1d**
 >
-> Apply the Golden Rules to the voltage follower circuit shown below. Show all steps. Your analysis must:
+> Apply the Golden Rules to the voltage follower circuit shwon in Figure 2. Show all steps. Your analysis must:
 >
 > 1. State the two Golden Rules and the condition under which they apply.
 > 2. Derive the output voltage in terms of the input voltage.
@@ -101,13 +101,13 @@ The circuit in the Unity-Gain Buffer section of this lab uses a voltage divider 
 >
 > Referring to Appendix B (Section B.3) and the Scopy documentation:
 >
-> 1. Describe the steps to configure the ADALM2000 power supplies to $+5$ V and $-5$ V in Scopy.
+> 1. Describe the steps to configure the M2K power supplies to $+5$ V and $-5$ V in Scopy.
 > 2. Identify which physical M2K terminals provide $V^+$, $V^-$, and GND.
-> 3. State which LM6134 pins each M2K terminal connects to, and which terminal on Appendix B Figure B.1 shows the required decoupling capacitor placement.
+> 3. State which LMC662 pins each M2K terminal connects to, and which terminal on Appendix B Figure B.1 shows the required decoupling capacitor placement.
 
 ### 1.7 Reflective AI Exercise: Feedback, the Golden Rules, and Real Op-Amp Limits
 
-**Objective:** Having worked through the device specifications and circuit calculations above, use an AI assistant to deepen your understanding of how negative feedback converts an impractically high open-loop gain into a stable, predictable amplifier, and how the real LM6134 deviates from ideal behavior in ways your calculations already quantify.
+**Objective:** Having worked through the device specifications and circuit calculations above, use an AI assistant to deepen your understanding of how negative feedback converts an impractically high open-loop gain into a stable, predictable amplifier, and how the real LMC662 deviates from ideal behavior in ways your calculations already quantify.
 
 #### Part 1: Exploration
 
@@ -119,7 +119,7 @@ Example prompts are provided below. You may use them, adapt them, or write your 
 
 Follow up with:
 
-> *"A voltage follower is supposed to reproduce the input perfectly at unity gain. How can slew rate cause the output to look different from the input even in a unity-gain configuration? Give me a concrete example with numbers that match the LM6134 specifications."*
+> *"A voltage follower is supposed to reproduce the input perfectly at unity gain. How can slew rate cause the output to look different from the input even in a unity-gain configuration? Give me a concrete example with numbers that match the LMC662 specifications."*
 
 **Focus Area 2: The Loading Problem and Why It Matters**
 
@@ -129,7 +129,7 @@ After completing both focus areas, compare the AI's explanations to your calcula
 
 #### Part 2: The Self-Test
 
-Using any AI assistant, write your own quiz prompt targeting the two concepts above. Your questions must involve at least one of the following: predicting whether a given signal will trigger slew-rate limiting in the LM6134, applying the Golden Rules to predict the output of the voltage follower, or explaining why the loading effect changes $V_{in}$ rather than just $V_{out}$ in Buffer Circuit 3.
+Using any AI assistant, write your own quiz prompt targeting the two concepts above. Your questions must involve at least one of the following: predicting whether a given signal will trigger slew-rate limiting in the LMC662 applying the Golden Rules to predict the output of the voltage follower, or explaining why the loading effect changes $V_{in}$ rather than just $V_{out}$ in Buffer Circuit 3.
 
 Apply the meta-prompt from *A Mind Worth Questioning* (introduced in Module 1) to evaluate and strengthen your draft before running the quiz. Submit your original draft, the AI's critique, your revised prompt, and the full quiz transcript.
 
@@ -141,7 +141,7 @@ Your written synthesis must address all three of the following points:
 
 - **The Technical "Why"** -- Correct use of at least two of the following terms: virtual short, negative feedback, slew rate, gain-bandwidth product, output saturation, loading effect.
 
-- **The Lab Application** -- A specific measurement you expect to make in Lab 6 that will look different from the ideal prediction, and the LM6134 parameter responsible for the difference. Reference the numerical value from your prelab calculations.
+- **The Lab Application** -- A specific measurement you expect to make in Lab 6 that will look different from the ideal prediction, and the LMC662 parameter responsible for the difference. Reference the numerical value from your prelab calculations.
 
 > **Prelab Deliverable #1h**
 >
@@ -157,6 +157,11 @@ Your written synthesis must address all three of the following points:
 
 Op amps must always be supplied with DC power and therefore it is best to configure these connections first before adding any other circuit components. Figure 1 shows one possible power arrangement on your solderless breadboard. We use two of the long rails for the positive and negative supply voltages, and two others for any ground connections that may be required. Included are the so-called "supply de-coupling" capacitors connected between the power-supply and ground rails. It is too early to discuss in great detail the purpose of these capacitors, but they are used to reduce noise on the supply lines and avoid parasitic oscillations. It is considered good practice in analog circuit design to always include small bypass capacitors close to the supply pins of each op amp in your circuit. Use the side cutters available in the lab to make the wires are cut to as short as possible such that components are flat on the protoboard. Also make the connecting wires such that they are not excessively long.
 
+<img src="media/LM6134BreadboardSupply.png" alt="Power supply breadboard photo showing an LM6134BIN quad op-amp IC inserted across the center divide of a white solderless breadboard. The chip is oriented upside-down relative to the viewer, with pin 1 at the bottom-right. A red jumper wire connects the top power rail to the breadboard row above pin 8 (V+), and a black jumper wire connects the bottom power rail to the row below pin 4 (V−). Two yellow resistors are visible at the top-left and bottom-right corners of the frame. Column numbers 15 through 30 are visible along both edges of the breadboard." style="width: 40%; display: block; margin: 0 auto;" />
+
+
+*Power supply connection for a different op-amp, in this case the LM6134. Make sure your op-amp is oriented correctly. The pin count starts at the indentation (sometimes marked with a dot). In this op-amp, pin 4 is the positive power supply connection and pin 11 for the −5 V power supply connection. In the LMC662, pin 8 is the positive and pin 4 the negative.  If you get the power connections wrong, the op-amp will be damaged when voltages are applied. See how the red wire is used for positive, and the black for negative.  Make use of this color scheme on your breadboard!  Note how the decoupling caps are mounted.*
+
 - Insert the op amp into your breadboard and add the wires and supply capacitors as shown in Figure 1. To avoid problems later you may want to attach a small label to the breadboard to indicate which rails correspond to +Vcc, -Vcc, and ground.
 
 - Attach the supply and GND connections from the ADALM2000 board to the terminals on your breadboard. Use jumper wires to power the rails as shown. Remember, the power-supply GND terminal will be our circuit "ground" reference.
@@ -166,7 +171,7 @@ Op amps must always be supplied with DC power and therefore it is best to config
 > **Leave the power supplies off. Get your setup checked off by TA or lab assistant before proceeding to the next step.**
 
 - Once checked off, run the Scopy software, set the power supplies to +5V and -5V, and turn on the power supplies.
-- Once you have your supply connections, use the M2K to probe the IC pins directly to confirm that pin 4 is at +5V and pin 11 is at -5V.
+- Once you have your supply connections, use the M2K to probe the IC pins directly to confirm that pin 8 is at +5V and pin 4 is at -5V.
 
 > **Lab Deliverable #1a**
 >
@@ -174,7 +179,7 @@ Op amps must always be supplied with DC power and therefore it is best to config
 
 > **Lab Deliverable #1b**
 >
-> Record the voltage measurements at pins 4 and 11 of the LM6134, including units. Submit via the course submission app.
+> Record the voltage measurements at pins 4 and 8 of the LMC662, including units. Submit via the course submission app.
 
 > **IMPORTANT**
 >
@@ -195,7 +200,7 @@ The first op-amp circuit is a deceptively simple one, shown in Figure 2. It is k
 - 1 1 k$\Omega$ resistor
 - 2 4.7 k$\Omega$ resistors
 - 2 10 k$\Omega$ resistors
-- 1 LM6134 quad op-amp
+- 1 LMC662 bi op-amp
 - 2 0.1 $\mu$F capacitors
 
 Using the ECE Emerge adaptor board and the ADALM2000 power supplies, construct the circuit shown in Figure 2. **Note that the power connections have not been explicitly shown here; it is assumed that those connections must be made in any real circuit (as you did in the previous step), so it is unnecessary to show them in the schematic from this point on.** Use jumper wires to connect input and output to the waveform generator and oscilloscope leads.
@@ -250,7 +255,7 @@ For an ideal op-amp the output will follow the input signal precisely for any in
 
 $$\text{Slew Rate} = \frac{\Delta V}{T_r}$$
 
-where $\Delta V = 0.8(V_{\text{max}} - V_{\text{min}})$ and $T_r$ is the 10%--90% rise time. Compare your measured value to the LM6134 datasheet specification of 12 V/$\mu$s. Note any asymmetry between the rising and falling edge results and suggest a reason.
+where $\Delta V = 0.8(V_{\text{max}} - V_{\text{min}})$ and $T_r$ is the 10%--90% rise time. Compare your measured value to the LMC662 datasheet specification of 12 V/$\mu$s. Note any asymmetry between the rising and falling edge results and suggest a reason.
 
 > **Lab Deliverable #2c**
 >
@@ -427,7 +432,7 @@ From the perspective of the load circuit, the buffer transforms a non-ideal volt
 > Before leaving the lab, verify that you have collected all the necessary information to complete your post-lab report:
 >
 > - [ ] **1a:** Photograph of power supply connections on the breadboard.
-> - [ ] **1b:** Voltage measurements at LM6134 pins 4 and 11.
+> - [ ] **1b:** Voltage measurements at LMC662 pins 4 and 8.
 > - [ ] **2a:** Oscilloscope screenshot of unity-gain waveforms at 1 kHz.
 > - [ ] **2b:** Photograph of unity-gain amplifier circuit.
 > - [ ] **2c:** Oscilloscope screenshot of slew-rate-limited output with cursors.
@@ -447,7 +452,7 @@ From the perspective of the load circuit, the buffer transforms a non-ideal volt
 
 > **Lab Deliverable #5a**
 >
-> Using your measured values of $\Delta V$, $T_r$, and $T_f$ from Deliverable 2d, compute the slew rate for both the rising and falling edges using $\text{Slew Rate} = \Delta V / T_r$. Present your results in a table showing: measured $\Delta V$, $T_r$, $T_f$, computed slew rate for both edges, and the LM6134 datasheet specification of 12 V/$\mu$s. Work on paper, showing all steps. Photograph your completed work and submit the image via the course submission app. Your name must be visible in the photo.
+> Using your measured values of $\Delta V$, $T_r$, and $T_f$ from Deliverable 2d, compute the slew rate for both the rising and falling edges using $\text{Slew Rate} = \Delta V / T_r$. Present your results in a table showing: measured $\Delta V$, $T_r$, $T_f$, computed slew rate for both edges, and the LMC662 datasheet specification of 12 V/$\mu$s. Work on paper, showing all steps. Photograph your completed work and submit the image via the course submission app. Your name must be visible in the photo.
 
 > **Lab Deliverable #5b**
 >
@@ -457,7 +462,7 @@ From the perspective of the load circuit, the buffer transforms a non-ideal volt
 
 > **Lab Deliverable #5c**
 >
-> Based on your slew rate measurements in Deliverable 5a, discuss any asymmetry between the rising and falling edge results. Suggest a physical reason for the asymmetry, referencing the internal structure of the LM6134 or the nature of the test signal. Submit via the course submission app.
+> Based on your slew rate measurements in Deliverable 5a, discuss any asymmetry between the rising and falling edge results. Suggest a physical reason for the asymmetry, referencing the internal structure of the LMC662 or the nature of the test signal. Submit via the course submission app.
 
 > **Lab Deliverable #5d**
 >
@@ -486,8 +491,8 @@ Neatness directly affects whether your circuit works the first time and how long
 2. **Wire length.** Use the shortest jumper that reaches between two points. Excess wire length increases parasitic inductance and capacitance; at the frequencies used in Labs 5 and 6 these parasitics are small but not zero. Long wires also create loops that act as antennas and pick up interference.
 
 3. **Color coding.** Follow this scheme on every build without exception:
-   - **Red**: positive supply ($+V_{cc}$, pin 4 of the LM6134)
-   - **Black**: negative supply ($-V_{cc}$, pin 11 of the LM6134)
+   - **Red**: positive supply ($+V_{cc}$, pin 8 of the LMC662)
+   - **Black**: negative supply ($-V_{cc}$, pin4 of the LMC662)
    - **Green**: ground
 
 4. **Signal flow.** Arrange components so the signal path reads left-to-right or top-to-bottom. Place the op-amp in the center of the breadboard with passive components and connections radiating outward from it.
@@ -512,35 +517,41 @@ Do not ask the TA to find the fault for you. Describe your debugging sequence an
 
 ---
 
-## Appendix B: The LM6134 Operational Amplifier
+## Appendix B: The LMC662 Operational Amplifier
 
-[**Data Sheet: LM6134**](https://www.ti.com/lit/ds/symlink/lm6134.pdf). Open this before completing the prelab deliverables.
+[**Data Sheet: LMC662**](https://www.ti.com/lit/ds/symlink/lmc662.pdf?). Open this before completing the prelab deliverables.
 
 ### B.1 Package and Pin Assignment
 
-The LM6134 is a **quad op-amp**: four independent op-amps in a single 14-pin DIP package. All four share power supply pins: pin 4 for $+V_{cc}$ and pin 11 for $-V_{cc}$. In Lab 6 you will use op-amp A (pins 1, 2, 3). In later labs additional op-amps in the same package will be used.
+The LMC662 is a **dual op-amp**: two independent op-amps in a single 8-pin DIP package. The two share power supply pins: pin 8 for $+V_{cc}$ and pin 4 for $-V_{cc}$.
 
-<!-- CIRCUITIKZ FIGURE: Rendered from LaTeX source as media/lm6134-pins2-1.png -->
-<img src="media/lm6134-pins2-1.png" alt="Schematic showing pin connections for all four LM6134 op-amps in a 2-by-2 grid. Each op-amp shows 0.1 microfarad decoupling capacitors on both supply rails. OA: plus IN A pin 3, minus IN A pin 2, OUT A pin 1. OB: plus IN B pin 5, minus IN B pin 6, OUT B pin 7. OC: plus IN C pin 10, minus IN C pin 9, OUT C pin 8. OD: plus IN D pin 12, minus IN D pin 13, OUT D pin 14. All share supply pins 4 and 11." style="width: 60%; display: block; margin: 0 auto;" />
 
-*Figure B.1: LM6134 connection diagram. The 0.1 $\mu$F decoupling capacitors are required on every build. Because pins 4 and 11 are shared across all four op-amps, one capacitor pair placed adjacent to the supply pins protects all four amplifiers simultaneously.*
+<img src="media/lm6134-pins2-1.png" alt="Schematic showing pin connections
+		for both LMC662 op-amps side by side. OA: plus IN A pin 3, minus
+		IN A pin 2, OUT A pin 1, with 0.1 microfarad decoupling capacitors
+		on V-plus pin 8 and V-minus pin 4. OB: plus IN B pin 5, minus IN B
+		pin 6, OUT B pin 7. Both op-amps share supply pins 4 and 8" style="width: 80%; display: block; margin: 0 auto;" />
 
-<img src="media/LM6132Pinout.png" alt="DIP-14 pin diagram of the LM6134 viewed from above. Notch on left marks pin 1. Counterclockwise numbering: pin 1 OUT A, pin 2 minus IN A, pin 3 plus IN A, pin 4 V-plus, pin 5 plus IN B, pin 6 minus IN B, pin 7 OUT B, pin 8 OUT C, pin 9 minus IN C, pin 10 plus IN C, pin 11 V-minus, pin 12 plus IN D, pin 13 minus IN D, pin 14 OUT D." style="max-width:35%;" />
+*Figure B.1: LMC662 connection diagram. The $0.1\,\mu$F decoupling
+		capacitors are required on every build. Because pins 4 and 8 are
+		shared across both op-amps, one capacitor pair placed adjacent
+		to the supply pins protects both amplifiers simultaneously..*
 
-*Figure B.2: LM6134 physical pin configuration (DIP-14, top view). The notch on the left end of the package identifies pin 1. Pins are numbered counterclockwise.*
+<img src="media/LM662.png" alt="DIP-8 pin diagram of the LMC662 viewed from above. Notch on left marks pin 1. Counterclockwise numbering: pin 1 OUT A, pin 2 minus IN A, pin 3 plus IN A, pin 4 V-minus, pin 5 plus IN B, pin 6 minus IN B, pin 7 OUT B, pin 8 V-plus,." style="max-width:35%; display: block; margin: 0 auto;" />
+
+*Figure B.2: LMC662 physical pin configuration (DIP-8, top view). The notch on the left end of the package identifies pin 1. Pins are numbered counterclockwise.*
 
 ### B.2 Key Specifications
 
-*Table B.1: LM6134 specifications referenced in Prelab Deliverables 1a--1c and 1g.*
-
+*Table B.1: LMC662 specifications referenced in Prelab Deliverables 1a--1c and 1g.*
 | **Parameter** | **Value** | **Significance** |
 |---|---|---|
-| Supply voltage range | 2.7 V -- 24 V | Powered from M2K ±5 V in this lab. |
-| Gain-bandwidth product | 10 MHz | At closed-loop gain $G$, the $-3$ dB bandwidth is $10\,\text{MHz}/G$. See Deliverable 1b. |
-| Slew rate | 12 V/$\mu$s | Maximum rate of output voltage change. Determines how fast the output can follow a large step. See Deliverable 1c. |
-| CMRR | 80 dB | Signals identical on both inputs are attenuated by a factor of $10^{80/20} = 10{,}000$ relative to a differential signal. |
-| PSRR | 82 dB | Power supply fluctuations are attenuated by a factor of $10^{82/20} \approx 12{,}589$ at the output. |
-| Quiescent current (per amp) | 360 $\mu$A | Total package draw: $4 \times 360\,\mu\text{A} = 1.44$ mA. Well within M2K supply limits. |
+| Supply voltage range | 4.75 V – 15.5 V | Single-supply or dual-supply operation; powered from M2K ±5 V ($V_S = 10$ V) in this lab, well within the rated range. |
+| Gain-bandwidth product | 1.4 MHz | At closed-loop gain $G$, the $-3$ dB bandwidth is $1.4\text{ MHz}/G$. See Deliverable 1b. |
+| Slew rate | 1.1 V/µs | Maximum rate of output voltage change. Determines how fast the output can follow a large step. See Deliverable 1c. |
+| CMRR | 85 dB | Signals identical on both inputs are attenuated by a factor of $10^{85/20} \approx 17{,}783$ relative to a differential signal. |
+| PSRR | 85 dB | Power supply fluctuations are attenuated by a factor of $10^{85/20} \approx 17{,}783$ at the output. |
+| Quiescent current (per amp) | 375 µA | Total dual-package draw: $2 \times 375\ \mu\text{A} = 750\ \mu\text{A}$. Well within M2K supply limits. |
 
 ### B.3 Decoupling Capacitors
 
@@ -556,8 +567,8 @@ The ADALM2000 provides two programmable DC supply outputs: $V^+$ (positive rail)
 
 1. Open Scopy and navigate to the *Power Supply* tab.
 2. Enable $V^+$ and set it to $+5$ V. Enable $V^-$ and set it to $-5$ V. Enable the output.
-3. Connect the M2K $V^+$ terminal (red) to the LM6134 pin 4 rail via a red wire.
-4. Connect the M2K $V^-$ terminal (white or labeled $-$) to the LM6134 pin 11 rail via a black wire.
+3. Connect the M2K $V^+$ terminal to LMC662 pin 8 rail via a red wire.
+4. Connect the M2K $V^-$ terminal to the LMC662 pin 4 rail via a black wire.
 5. Connect the M2K GND terminal to the breadboard ground rail via a green wire. All circuit grounds (M2K oscilloscope GND, signal generator GND, and the breadboard GND rail) must share this connection.
 
 > **WARNING**
