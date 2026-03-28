@@ -1,8 +1,8 @@
-# ECE Emerge Lab Manuals
+# ECE Emerge — Course Materials
 
-ADA-compliant lab manuals for **EEC1: Introduction to Electrical Engineering**, Spring 2026, Department of Electrical and Computer Engineering, UC Davis.
+ADA-compliant course materials for **EEC1: Introduction to Electrical Engineering**, Spring 2026, Department of Electrical and Computer Engineering, UC Davis.
 
-This repository contains lab manuals for the ECE Emerge course, covering hands-on experiments with the ADALM2000 (M2K) measurement platform, signal conditioning, and the ECE Emerge Digital Scale Project.
+This repository contains lab manuals and the course reader for the ECE Emerge course, covering hands-on experiments with the ADALM2000 (M2K) measurement platform, signal conditioning, and the ECE Emerge Digital Scale Project.
 
 ---
 
@@ -19,6 +19,7 @@ This repository contains lab manuals for the ECE Emerge course, covering hands-o
 | `Lab7/` | Lab 7: Operational amplifiers — inverting, non-inverting, summing amplifiers |
 | `Lab8/` | Lab 8: Instrumentation amplifier (INA125), differential signal acquisition |
 | `Project/` | ECE Emerge Digital Scale Project brief and appendices |
+| `Reader/` | Course reader — *ECE Confidential: Cracking the Code* (ADA-compliant HTML) |
 | `md2ada.py` | Markdown to ADA-compliant HTML converter (see below) |
 | `Learning objectives for labs/` | Essential learning objectives for Lectures 1–16 |
 
@@ -55,6 +56,21 @@ Essential skills and learning objectives aligned to each lecture, used to guide 
 | Lecture 14 Essentials | [Lecture14Essentials.md](https://github.com/AndreKnoesen/ECE-Emerge/blob/main/Learning%20objectives%20for%20labs/Lecture14Essentials.md) |
 | Lecture 15 Essentials | [Lecture15Essentials.md](https://github.com/AndreKnoesen/ECE-Emerge/blob/main/Learning%20objectives%20for%20labs/Lecture15Essentials.md) |
 | Lecture 16 Essentials | [Lecture16Essentials.md](https://github.com/AndreKnoesen/ECE-Emerge/blob/main/Learning%20objectives%20for%20labs/Lecture16Essentials.md) |
+
+---
+
+## Course Reader — *ECE Confidential: Cracking the Code*
+
+ADA-compliant HTML version of the course reader. Each chapter is a single self-contained HTML file with all images embedded — no external files required. Math is rendered via KaTeX. Every page carries a CC BY-NC 4.0 license footer.
+
+| Chapter | Link |
+|---|---|
+| AI Partner (introduction) | [AIPartner.html](https://andreknoesen.github.io/ECE-Emerge/Reader/AIPartner.html) |
+| Chapter 1 — The Flashlight | [TheFlashlight.html](https://andreknoesen.github.io/ECE-Emerge/Reader/TheFlashlight.html) |
+| Chapter 2 — Language of Circuits | [LanguageofCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html) |
+| Chapter 3 — Secrets of DC Circuits | [SecretsofDCCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SecretsofDCCircuits.html) |
+
+Further chapters will be added as they are converted.
 
 ---
 
@@ -129,6 +145,10 @@ Lab manuals are served via GitHub Pages:
 | Equipment: Resistance Measurement | [ResistanceMeasurements.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/ResistanceMeasurements.html) |
 | Equipment: DC Voltage Measurement | [DCVoltageMeasurement.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/DCVoltageMeasurement.html) |
 | Equipment: Capacitance Measurement | [CapacitanceMeasurement.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/CapacitanceMeasurement.html) |
+| Reader: AI Partner | [AIPartner.html](https://andreknoesen.github.io/ECE-Emerge/Reader/AIPartner.html) |
+| Reader: Ch. 1 — The Flashlight | [TheFlashlight.html](https://andreknoesen.github.io/ECE-Emerge/Reader/TheFlashlight.html) |
+| Reader: Ch. 2 — Language of Circuits | [LanguageofCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html) |
+| Reader: Ch. 3 — Secrets of DC Circuits | [SecretsofDCCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SecretsofDCCircuits.html) |
 
 ---
 
