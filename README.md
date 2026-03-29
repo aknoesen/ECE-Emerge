@@ -61,7 +61,19 @@ Essential skills and learning objectives aligned to each lecture, used to guide 
 
 ## Course Reader — *ECE Confidential: Cracking the Code*
 
-ADA-compliant HTML version of the course reader. Each chapter is a single self-contained HTML file with all images embedded — no external files required. Math is rendered via KaTeX. Every page carries a CC BY-NC 4.0 license footer.
+ADA-compliant HTML version of the course reader. Available as a **complete single-file book** or as individual chapter pages.
+
+### Complete Book
+
+| Format | Link |
+|---|---|
+| Full book (cover, TOC, all chapters) | [ECEConfidential.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html) |
+
+The book file is self-contained (23 MB): cover page, title page, accessibility statement with individual chapter links, preamble, and all 11 chapters. Features a sticky sidebar table of contents, consistent typography, KaTeX math, and a built-in accessibility notice meeting WCAG 2.1 Level AA.
+
+### Individual Chapters
+
+Each chapter is also available as a smaller standalone page — recommended for screen readers and assistive technology.
 
 | Chapter | Link |
 |---|---|
@@ -151,6 +163,7 @@ Lab manuals are served via GitHub Pages:
 | Equipment: Resistance Measurement | [ResistanceMeasurements.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/ResistanceMeasurements.html) |
 | Equipment: DC Voltage Measurement | [DCVoltageMeasurement.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/DCVoltageMeasurement.html) |
 | Equipment: Capacitance Measurement | [CapacitanceMeasurement.html](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/CapacitanceMeasurement.html) |
+| Reader: Complete Book | [ECEConfidential.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html) |
 | Reader: AI Partner | [AIPartner.html](https://andreknoesen.github.io/ECE-Emerge/Reader/AIPartner.html) |
 | Reader: Ch. 1 — The Flashlight | [TheFlashlight.html](https://andreknoesen.github.io/ECE-Emerge/Reader/TheFlashlight.html) |
 | Reader: Ch. 2 — Language of Circuits | [LanguageofCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html) |
