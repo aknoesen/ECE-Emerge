@@ -70,8 +70,13 @@ ADA-compliant HTML version of the course reader. Each chapter is a single self-c
 | Chapter 2 — Language of Circuits | [LanguageofCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html) |
 | Chapter 3 — Secrets of DC Circuits | [SecretsofDCCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SecretsofDCCircuits.html) |
 | Chapter 4 — The I-V Menagerie | [IVMenagerie.html](https://andreknoesen.github.io/ECE-Emerge/Reader/IVMenagerie.html) |
-
-Further chapters will be added as they are converted.
+| Chapter 5 — Signals in Time | [SignalsInTime.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInTime.html) |
+| Chapter 6 — Signals in Frequency | [SignalsInFrequency.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInFrequency.html) |
+| Chapter 7 — Circuits that Remember | [InductorsCapacitors.html](https://andreknoesen.github.io/ECE-Emerge/Reader/InductorsCapacitors.html) |
+| Chapter 8 — The Imaginary Made Useful | [ComplexNumbers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ComplexNumbers.html) |
+| Chapter 9 — The Impedance Code | [ACAnalysis.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ACAnalysis.html) |
+| Chapter 10 — How Op-Amps Hide Complexity | [OperationalAmplifiers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html) |
+| Chapter 11 — The Signal in the Difference | [InstrumentationAmplifiers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/InstrumentationAmplifiers.html) |
 
 ---
 
@@ -151,6 +156,13 @@ Lab manuals are served via GitHub Pages:
 | Reader: Ch. 2 — Language of Circuits | [LanguageofCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html) |
 | Reader: Ch. 3 — Secrets of DC Circuits | [SecretsofDCCircuits.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SecretsofDCCircuits.html) |
 | Reader: Ch. 4 — The I-V Menagerie | [IVMenagerie.html](https://andreknoesen.github.io/ECE-Emerge/Reader/IVMenagerie.html) |
+| Reader: Ch. 5 — Signals in Time | [SignalsInTime.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInTime.html) |
+| Reader: Ch. 6 — Signals in Frequency | [SignalsInFrequency.html](https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInFrequency.html) |
+| Reader: Ch. 7 — Circuits that Remember | [InductorsCapacitors.html](https://andreknoesen.github.io/ECE-Emerge/Reader/InductorsCapacitors.html) |
+| Reader: Ch. 8 — The Imaginary Made Useful | [ComplexNumbers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ComplexNumbers.html) |
+| Reader: Ch. 9 — The Impedance Code | [ACAnalysis.html](https://andreknoesen.github.io/ECE-Emerge/Reader/ACAnalysis.html) |
+| Reader: Ch. 10 — How Op-Amps Hide Complexity | [OperationalAmplifiers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html) |
+| Reader: Ch. 11 — The Signal in the Difference | [InstrumentationAmplifiers.html](https://andreknoesen.github.io/ECE-Emerge/Reader/InstrumentationAmplifiers.html) |
 
 ---
 
