@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submitting Assignments with GradeBridge</title>
+  <style>
+    /* ── Skip navigation (ADA requirement) ── */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      display: block;
+      padding: 8px 16px;
+      background: #005a9c;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* ── Base typography ── */
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    /* ── Headings ── */
+    h1 {
+      font-size: 1.75rem;
+      border-bottom: 3px solid #005a9c;
+      padding-bottom: 0.4rem;
+      color: #003366;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2.25rem;
+      color: #003366;
+      border-left: 5px solid #005a9c;
+      padding-left: 0.6rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.5rem;
+      color: #003366;
+    }
+
+    /* ── Blockquote (callout boxes) ── */
+    blockquote {
+      border-left: 4px solid #6699cc;
+      margin: 0.75rem 0;
+      padding: 0.5rem 1rem;
+      background: #f0f5ff;
+      color: #1a1a1a;
+    }
+
+    /* ── Inline code ── */
+    code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.9em;
+      background: #f4f4f4;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      color: #1a1a1a;
+    }
+
+    /* ── Images ── */
+    img {
+      max-width: 70%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    /* ── Horizontal rule ── */
+    hr {
+      border: none;
+      border-top: 1px solid #cccccc;
+      margin: 1.5rem 0;
+    }
+
+    /* ── Responsive table wrapper ── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      border: 1px solid #aaaaaa;
+      border-radius: 4px;
+    }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: bold;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.75rem;
+      background: #003366;
+      color: #ffffff;
+    }
+    th {
+      background: #005a9c;
+      color: #ffffff;
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      white-space: nowrap;
+    }
+    td {
+      padding: 0.45rem 0.75rem;
+      border-top: 1px solid #dddddd;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td {
+      background: #f7f9ff;
+    }
+    tr:hover td {
+      background: #eef3ff;
+    }
+
+    /* ── Strong / emphasis ── */
+    strong {
+      color: #8b0000;  /* dark red — passes 4.5:1 contrast on white */
+    }
+    em {
+      color: #555555;
+    }
+
+    /* ── Focus visible for keyboard navigation ── */
+    a:focus, button:focus, [tabindex]:focus {
+      outline: 3px solid #005a9c;
+      outline-offset: 2px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ],
+      throwOnError: false
+    });"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content" role="main">
+    <h1>Submitting Assignments with GradeBridge</h1>
+<h2>What You Will Do</h2>
+<p>Submitting an assignment through GradeBridge takes four steps:</p>
+<ol>
+<li><strong>Download</strong> the assignment file from Canvas.</li>
+<li><strong>Open</strong> the GradeBridge app and enter your answers.</li>
+<li><strong>Download</strong> your completed solution files.</li>
+<li><strong>Upload</strong> your solution to Gradescope (and Canvas if instructed).</li>
+</ol>
+<p>Each step is explained below. Read through the whole guide once before you start so nothing comes as a surprise.</p>
+<hr/>
+<h2>Before You Begin</h2>
+<p>You will use three tools:</p>
+<div aria-label="Before You Begin" class="table-wrapper" role="region" tabindex="0"><table><caption>Before You Begin</caption>
+<thead>
+<tr>
+<th scope="col">Tool</th>
+<th scope="col">What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Canvas</strong></td>
+<td>Your course website — where you pick up the assignment file.</td>
+</tr>
+<tr>
+<td><strong>GradeBridge Student Submission App</strong></td>
+<td>A web app at <code>https://veriqai.github.io/GradeBridge-Student-Submission/</code> — where you enter and export your answers.</td>
+</tr>
+<tr>
+<td><strong>Gradescope</strong></td>
+<td>Where you submit your completed solution files for grading.</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Note on file locations:</strong> The app works the same on any computer (Windows, Mac, or Linux). On Windows, downloaded files will appear in your <code>Downloads</code> folder (<code>C:\Users\YourName\Downloads</code>). On a Mac they appear in <code>~/Downloads</code>.</p>
+</blockquote>
+<hr/>
+<blockquote>
+<p><strong>Before you open the app — get organized first.</strong></p>
+<p>Read through your assignment carefully and identify everything you will need to submit (written answers, screenshots, images, etc.). Collect <strong>all of these materials into a single folder</strong> on your computer before you open GradeBridge. For example, <code>Documents\EEC1\Lab1_Submission\</code>. Your assignment file will list exactly what is required.</p>
+<p>Having everything in one place before you start will make the process smooth and uninterrupted.</p>
+</blockquote>
+<hr/>
+<h2>Step 1 — Download the Assignment File from Canvas</h2>
+<ol>
+<li>Log in to Canvas and go to the assignment you want to complete.</li>
+<li>Download the assignment file. It will be a <strong>JSON file</strong>. The filename will either be named or at least end in <code>assignment_spec.json</code>.</li>
+<li>The file will save to your <code>Downloads</code> folder. Leave it there for now; you will need it in the next step.</li>
+</ol>
+<hr/>
+<h2>Step 2 — Open GradeBridge and Enter Your Answers</h2>
+<ol>
+<li>
+<p>Open a web browser and go to the GradeBridge Student Submission App:<br/>
+<strong><code>https://veriqai.github.io/GradeBridge-Student-Submission/</code></strong></p>
+</li>
+<li>
+<p>Enter your <strong>full name</strong> (exactly as it appears in Canvas) in the left panel.</p>
+</li>
+<li>
+<p>Click <strong><code>Upload JSON</code></strong> and select the assignment file you downloaded in Step 1.</p>
+</li>
+<li>
+<p>Work through the assignment: type your answers into the text boxes provided and upload any required screenshots or images into the image fields.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Math equations:</strong> You can type mathematical expressions using LaTeX notation. Wrap inline math in <code>$...$</code> and display math in <code>$$...$$</code>. A live preview appears below the text box as you type. Click <strong><code>Math Equation Format Help</code></strong> in the sidebar for examples.</p>
+</blockquote>
+<ol>
+<li><strong>Your work saves automatically.</strong> The app saves your progress to your browser every few seconds — you will see a green "Saved" timestamp at the bottom of the left panel. You can safely close the browser and return later without losing your work.</li>
+</ol>
+<blockquote>
+<p><strong>Switching computers or browsers?</strong> The auto-save only works in the same browser on the same computer. If you need to continue your work elsewhere, click <strong><code>Save Backup</code></strong> in the left panel. This downloads a backup JSON file you can reload on any computer or browser. To restore: return to the app, re-enter your name, then click <strong><code>Load Work</code></strong> and select your backup file.</p>
+</blockquote>
+<hr/>
+<h2>Step 3 — Download Your Completed Solution Files</h2>
+<ol>
+<li>When you have finished entering all your answers, the bottom bar shows:</li>
+</ol>
+<div aria-label="Step 3 — Download Your Completed Solution Files" class="table-wrapper" role="region" tabindex="0"><table><caption>Step 3 — Download Your Completed Solution Files</caption>
+<thead>
+<tr>
+<th scope="col">Button</th>
+<th scope="col">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save Backup</strong></td>
+<td>Saves a backup of your work-in-progress (not for submission)</td>
+</tr>
+<tr>
+<td><strong>Download for Gradescope</strong> <em>(blue)</em></td>
+<td>Downloads your submission file and PDF — <strong>submit these to Gradescope</strong></td>
+</tr>
+<tr>
+<td><strong>Preview</strong></td>
+<td>Shows a formatted view of your submission before downloading</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>
+<p>Click <strong><code>Preview</code></strong> if you want to review your submission first. Scroll through to check that you have answered every question. Click <strong><code>Back</code></strong> to return and make corrections.</p>
+</li>
+<li>
+<p>Click the blue <strong><code>Download for Gradescope</code></strong> button. This saves your submission as a JSON file named:<br/>
+<code>{YourName}_{CourseCode}_submission.json</code><br/>
+    For example: <code>Jane_Doe_EEC1_submission.json</code><br/>
+<strong>This is one of the files you will submit to Gradescope.</strong><br/>
+    It will then shortly download a PDF copy of your submission. <strong>You will submit this file to Gradescope also</strong>, so that graders can review the answers that they'll need to grade themselves, especially those with images. It's also useful to keep for your own records. The file should be named:<br/>
+<code>{YourName}_{CourseCode}.pdf</code></p>
+</li>
+</ol>
+<p>Both files will appear in your <code>Downloads</code> folder.</p>
+<hr/>
+<h2>Step 4 — Submit Your Solution on Gradescope</h2>
+<ol>
+<li>
+<p>Log in to Gradescope and navigate to the assignment.</p>
+</li>
+<li>
+<p>Upload the <strong><code>_submission.json</code></strong> and <strong><code>.pdf</code></strong> file and you downloaded in Step 11.</p>
+<blockquote>
+<p><strong>Important:</strong> Make sure you are uploading the submission file ending in <code>_submission.json</code>, <strong>not</strong> the original assignment file you downloaded from Canvas in Step 1, and <strong>not</strong> a backup file. The files have similar names — double-check before you submit.</p>
+</blockquote>
+</li>
+<li>
+<p>If your instructor also requires a Canvas submission, upload the same <code>_submission.json</code> file and <code>.pdf</code> there as well.</p>
+</li>
+</ol>
+<hr/>
+<h2>Quick Reference</h2>
+<div aria-label="Quick Reference" class="table-wrapper" role="region" tabindex="0"><table><caption>Quick Reference</caption>
+<thead>
+<tr>
+<th scope="col">What</th>
+<th scope="col">Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assignment JSON (input)</td>
+<td>Downloaded from Canvas in Step 1</td>
+</tr>
+<tr>
+<td>GradeBridge App</td>
+<td><code>https://veriqai.github.io/GradeBridge-Student-Submission/</code></td>
+</tr>
+<tr>
+<td>Auto-save</td>
+<td>Happens automatically every few seconds in the same browser</td>
+</tr>
+<tr>
+<td>Backup JSON</td>
+<td>Generated by <code>Save Backup</code> in the sidebar — use to resume on a different computer</td>
+</tr>
+<tr>
+<td>Submission JSON</td>
+<td>Generated by <code>Download for Gradescope</code> — <strong>submit this to Gradescope</strong></td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>Also generated by <code>Download for Gradescope</code> — for your records <strong>and for Gradescope</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>Troubleshooting</h2>
+<p><strong>My work disappeared when I reopened the browser.</strong><br/>
+Auto-save stores your work in the browser you used. If you opened a different browser or cleared your browser data, the auto-saved session will not be there. Always use <code>Save Backup</code> if you plan to close the browser, switch computers, or use a different browser.</p>
+<p><strong>The app says "Invalid assignment file."</strong><br/>
+You may have uploaded a backup file instead of the assignment file, or a file from a different course. Re-download the assignment JSON from Canvas and try again.</p>
+<p><strong>I accidentally uploaded the wrong assignment.</strong><br/>
+Click <code>Upload JSON</code> again in the left panel and select the correct file. Your answers will be cleared when a new assignment loads.</p>
+<p><strong>The math preview is not showing.</strong><br/>
+Check that you have closed your <code>$` delimiters correctly — every opening `$</code> needs a matching closing <code>$</code>. Refer to <strong>Math Equation Format Help</strong> in the sidebar for correct syntax.</p>
+<p><strong>I submitted the wrong file to Gradescope.</strong><br/>
+Contact your instructor as soon as possible. Gradescope allows resubmission before the deadline in most cases.</p>
+<p>Version 1</p>
+  </main>
+</body>
+</html>
