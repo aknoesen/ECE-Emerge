@@ -19,7 +19,7 @@ The purpose of Lab 5 is to:
 
 ## 1. Prelab Assignment
 
-Before the lab session, review the [**Scopy Network Analyzer**](https://wiki.analog.com/university/tools/m2k/scopy/networkanalyzer) documentation.
+Before the lab session, review the <a href="https://wiki.analog.com/university/tools/m2k/scopy/networkanalyzer" target="_blank" rel="noopener noreferrer"><strong>Scopy Network Analyzer</strong></a> documentation.
 
 ### 1.1 Complex Numbers
 
@@ -27,11 +27,11 @@ Filters are analyzed using complex numbers. Use the two widgets below to build y
 
 > **Interactive Widget: Complex Number Visualizer**
 >
-> Use the [**Complex Number Visualizer**](https://andreknoesen.github.io/eec1-widgets/complex_visualizer.html) to become familiar with the basic operations involving complex numbers: addition, subtraction, multiplication, and division. Explore how complex numbers are represented in rectangular and polar form and how operations change their magnitude and angle.
+> Use the <a href="https://aknoesen.github.io/eec1-widgets/complex_visualizer.html" target="_blank" rel="noopener noreferrer"><strong>Complex Number Visualizer</strong></a> to become familiar with the basic operations involving complex numbers: addition, subtraction, multiplication, and division. Explore how complex numbers are represented in rectangular and polar form and how operations change their magnitude and angle.
 
 > **Interactive Widget: Complex Number Traps**
 >
-> Work through the [**Complex Number Traps**](https://andreknoesen.github.io/eec1-widgets/complex_traps.html) activity to identify and correct common errors in complex number arithmetic. Work through each trap on your own first; then use the widget to check your thinking.
+> Work through the <a href="https://aknoesen.github.io/eec1-widgets/complex_traps.html" target="_blank" rel="noopener noreferrer"><strong>Complex Number Traps</strong></a> activity to identify and correct common errors in complex number arithmetic. Work through each trap on your own first; then use the widget to check your thinking.
 
 > **Prelab Deliverable #0**
 >
@@ -43,7 +43,7 @@ Filters are analyzed using complex numbers. Use the two widgets below to build y
 
 ### 1.2 Filter Fundamentals and Transfer Functions
 
-Review Impedance and Filters in [**ECE Confidential: Cracking the Code**](https://ucdavis.box.com/s/oynuuuo39k6ptme193ffs8gq8dt3pf3w) and watch the video [**Impedance**](https://video.ucdavis.edu/media/Impedance/1_iiy1q6u1). Understand the following terms:
+Review Impedance and Filters in <a href="https://ucdavis.box.com/s/oynuuuo39k6ptme193ffs8gq8dt3pf3w" target="_blank" rel="noopener noreferrer"><strong>ECE Confidential: Cracking the Code</strong></a> and watch the video <a href="https://video.ucdavis.edu/media/Impedance/1_iiy1q6u1" target="_blank" rel="noopener noreferrer"><strong>Impedance</strong></a>. Understand the following terms:
 
 - *Transfer function*: The magnitude $|H(j\omega)|$ describes how the amplitude of the output signal varies with frequency relative to the input signal; the phase $\angle H(j\omega)$ describes the phase shift between input and output.
 
@@ -164,7 +164,7 @@ grid on;
 % =>  % COMPLETE: plot high-pass phase in the same format as figure(2)
 ```
 
-Starter code available for download: [**Bode Plot Starter Code**](https://drive.google.com/file/d/10Ly2NI00kwKAccDSjq4E38_ZPHnInn8X/view?usp=sharing).
+Starter code available for download: <a href="https://drive.google.com/file/d/10Ly2NI00kwKAccDSjq4E38_ZPHnInn8X/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>Bode Plot Starter Code</strong></a>.
 
 ### 1.3 Reflective AI Exercise: RC Filters and Frequency Response
 

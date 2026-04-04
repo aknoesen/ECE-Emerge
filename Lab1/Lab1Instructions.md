@@ -100,7 +100,7 @@ Your written synthesis must address all three of the following points:
 
 ### 1.2 Solderless Breadboard
 
-You will use a solderless breadboard, as depicted in Figure 1, to construct basic circuits. Take the time to understand [**What is a solderless breadboard?**](https://wiki.analog.com/university/courses/electronics/electronics-lab-breadboards) and how it is used.
+You will use a solderless breadboard, as depicted in Figure 1, to construct basic circuits. Take the time to understand <a href="https://wiki.analog.com/university/courses/electronics/electronics-lab-breadboards" target="_blank" rel="noopener noreferrer"><strong>What is a solderless breadboard?</strong></a> and how it is used.
 
 <img src="media/SolderlessProtoboard.png" alt="Solderless breadboard viewed from above. Four horizontal power rails run the full width of the board, one pair at the top and one pair at the bottom, marked with red and blue stripes for positive and negative connections respectively. The central area contains two banks of vertical tie-point columns separated by a center gap, with yellow lines showing that holes in each column of five share an electrical connection. The center gap isolates the two banks, allowing integrated circuits to span it." style="width: 60%; display: block; margin: 0 auto;" />
 
@@ -227,7 +227,7 @@ The second 1×15 connector connects to the M2K connections:
 
 *Figure 11: Example of how UC Davis M2K Adaptor Board is used with M2K. The board will be plugged into a M2K. There are two sets of horizontal rails on the solderless board. In each set, they are labeled + (red) and − (blue). Ignore the specific meaning of the labels on the solderless boards. In this example, the person implementing the circuit chose to use the horizontal rails such that: the "+" on the top rail is for the positive supply voltage; the "+" on the bottom rail for negative supply voltage; and the "−" on both the top and bottom horizontal rails for ground. Note how the red, black, and green wires were used to indicate positive, negative, and ground connections, respectively. Get into a habit of doing the same, as it makes debugging a circuit much easier.*
 
-During the lab you will be given a printed circuit board and the necessary connectors, and you will assemble and solder your own adapter board. This video shows how this will be done: [Assembling a UC Davis M2K Adaptor Board](https://video.ucdavis.edu/media/Assembly+of+M2K+Adaptor+Board.mp4/1_ia02ldof)
+During the lab you will be given a printed circuit board and the necessary connectors, and you will assemble and solder your own adapter board. This video shows how this will be done: <a href="https://video.ucdavis.edu/media/Assembly+of+M2K+Adaptor+Board.mp4/1_ia02ldof" target="_blank" rel="noopener noreferrer">Assembling a UC Davis M2K Adaptor Board</a>
 
 ---
 
@@ -235,9 +235,9 @@ During the lab you will be given a printed circuit board and the necessary conne
 
 Before coming to Lab 1, two software installations are required. One is for the M2K, and the other is the Scopy™ graphical application software. Follow the directions:
 
-1. [M2K Video Series: Video 1 - Unboxing](https://www.youtube.com/watch?v=LCf-_iREESQ&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=1)
+1. <a href="https://www.youtube.com/watch?v=LCf-_iREESQ&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=1" target="_blank" rel="noopener noreferrer">M2K Video Series: Video 1 - Unboxing</a>
 
-2. [M2K Video Series: Video 2a - Windows Installation](https://www.youtube.com/watch?v=894HkVXf7-U&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=2&t=15s)
+2. <a href="https://www.youtube.com/watch?v=894HkVXf7-U&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=2&t=15s" target="_blank" rel="noopener noreferrer">M2K Video Series: Video 2a - Windows Installation</a>
    *(Note: If you experience problems setting up the M2K device, before contacting a teaching assistant, verify that you have installed Scopy version 1.4.1 with firmware version 0.31, as these specific versions are known to be reliable.)*
 
 > **WARNING: Documentation Convention — Your Name in Every Image**
@@ -258,7 +258,7 @@ Before coming to Lab 1, two software installations are required. One is for the 
 
 #### M2K Calibration
 
-Watch [M2K Video Series: Video 3 - Calibration](https://www.youtube.com/watch?v=M7degXTb2CA&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=5). Plug in your M2K using the USB connector in the middle. Open SCOPY, click the connect button and allow the calibration of the unit to conclude.
+Watch <a href="https://www.youtube.com/watch?v=M7degXTb2CA&list=PLE6soOeVPOJ0Pj5sMui4KPDiTa7HY50y3&index=5" target="_blank" rel="noopener noreferrer">M2K Video Series: Video 3 - Calibration</a>. Plug in your M2K using the USB connector in the middle. Open SCOPY, click the connect button and allow the calibration of the unit to conclude.
 
 *(Note: During calibration, the M2K signal generator temporarily switches to low impedance mode, which can disrupt any connected circuits. The generator outputs a ground signal (0 V) followed by a near full-scale voltage for approximately 100 ms. This sudden voltage change explains why you should never have circuitry connected during the calibration process. Furthermore, if a load is connected during calibration, the system will incorrectly adjust its calibration values to compensate for that specific load. This compromises accuracy, as voltages near full scale may not be output correctly when different loads are used later.)*
 
@@ -367,7 +367,7 @@ Adjust the negative supply voltage to reflect your birth date in the format of d
 
 ### Part 3: M2K Voltmeter
 
-Become familiar with [Scopy™ Voltmeter](https://wiki.analog.com/university/tools/M2K/scopy/voltmeter). The M2K voltmeter uses 12-bit ADCs to measure voltages. There are two channels:
+Become familiar with <a href="https://wiki.analog.com/university/tools/M2K/scopy/voltmeter" target="_blank" rel="noopener noreferrer">Scopy™ Voltmeter</a>. The M2K voltmeter uses 12-bit ADCs to measure voltages. There are two channels:
 
 1. Channel one uses differential analog input channels 1 positive (1+) and 1 negative (1−)
 2. Channel two uses differential analog input channels 2 positive (2+) and 2 negative (2−)
@@ -517,9 +517,9 @@ Collect the following components:
 
 Perform the following measurements:
 
-1. Measure the resistance of each resistor using the Keysight multimeter on your bench. See: [How to Measure Resistance with Keysight EDU34450A Multimeter](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/ResistanceMeasurements.html)
+1. Measure the resistance of each resistor using the Keysight multimeter on your bench. See: <a href="https://aknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/ResistanceMeasurements.html" target="_blank" rel="noopener noreferrer">How to Measure Resistance with Keysight EDU34450A Multimeter</a>
 
-2. Measure the capacitance of the capacitor using the Keysight multimeter on your bench. See: [How to Measure Capacitance with Keysight EDU34450A Multimeter](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/CapacitanceMeasurement.html)
+2. Measure the capacitance of the capacitor using the Keysight multimeter on your bench. See: <a href="https://aknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/CapacitanceMeasurement.html" target="_blank" rel="noopener noreferrer">How to Measure Capacitance with Keysight EDU34450A Multimeter</a>
 
 3. Record all measured values for future reference.
 

@@ -126,7 +126,7 @@ Each team has a 15-minute slot. All team members must be present. Thirty minutes
 
 The team must:
 
-- Produce a plot of weight versus ADC output voltage using [**the provided script**](https://drive.google.com/file/d/1cvzQnWN2NxrCuvVuC6KTP3q3qRAWrsc7/view?usp=sharing), demonstrating that the design achieves close to a 5 V swing without saturating any amplifier stage. The plot should show a negative slope: approximately $+2.5$ V at zero load decreasing to approximately $-2.5$ V at full load.
+- Produce a plot of weight versus ADC output voltage using <a href="https://drive.google.com/file/d/1cvzQnWN2NxrCuvVuC6KTP3q3qRAWrsc7/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>the provided script</strong></a>, demonstrating that the design achieves close to a 5 V swing without saturating any amplifier stage. The plot should show a negative slope: approximately $+2.5$ V at zero load decreasing to approximately $-2.5$ V at full load.
 
 - Estimate the number of jelly beans in a closed container. A similar empty container will be provided for taring.
 
@@ -202,7 +202,7 @@ For the 5 kg full-scale load cell used in this project, key absolute limits are:
 
 <img src="media/LoadCellFiveKg.png" alt="Engineering drawing showing the dimensions of a rectangular aluminum beam load cell in top and side views. Top view: the beam is 75 plus or minus 0.15 millimeters long and 12.7 millimeters wide. The left and right mounting sections are each 10 plus or minus 0.15 millimeters long with two M4 mounting holes each. The central flexure section is 44 plus or minus 0.15 millimeters long with a crosshatch pattern indicating the strain gauge bonding area. Side view: the beam is 12.7 millimeters tall with a central hourglass-shaped cutout 7 plus or minus 0.1 millimeters wide creating the flexure region. Four wires exit from the right end, each 0.8 millimeters in diameter and 200 millimeters long." style="width: 60%; display: block; margin: 0 auto;" />
 
-*Figure A.1: [Load cell dimensions.](https://cdn-shop.adafruit.com/product-files/4541/C14641+C14642+C14643+datasheet.png)*
+*Figure A.1: <a href="https://cdn-shop.adafruit.com/product-files/4541/C14641+C14642+C14643+datasheet.png" target="_blank" rel="noopener noreferrer">Load cell dimensions.</a>*
 
 ---
 

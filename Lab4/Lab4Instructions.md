@@ -19,7 +19,7 @@ The purpose of Lab 4 is to:
 
 ### 1.1 Theoretical Review
 
-Study the material at [**ECE Confidential, Cracking The Code: Circuits that Remember**](https://ucdavis.box.com/s/oynuuuo39k6ptme193ffs8gq8dt3pf3w) before proceeding.
+Study the material at <a href="https://ucdavis.box.com/s/oynuuuo39k6ptme193ffs8gq8dt3pf3w" target="_blank" rel="noopener noreferrer"><strong>ECE Confidential, Cracking The Code: Circuits that Remember</strong></a> before proceeding.
 
 ### 1.2 RC Circuit Transient Response
 
@@ -93,7 +93,7 @@ Before entering the lab, calculate the key parameters for each circuit. Keep the
 
 > **Interactive Widget: RC Transient Response**
 >
-> Use the [**RC Interactive Widget**](https://andreknoesen.github.io/eec1-widgets/RC_Interactive.html) to explore how the capacitor voltage builds and decays as you vary $R$, $C$, and the input frequency. Work through the deliverables below on your own first; then use the widget to check your thinking.
+> Use the <a href="https://aknoesen.github.io/eec1-widgets/RC_Interactive.html" target="_blank" rel="noopener noreferrer"><strong>RC Interactive Widget</strong></a> to explore how the capacitor voltage builds and decays as you vary $R$, $C$, and the input frequency. Work through the deliverables below on your own first; then use the widget to check your thinking.
 
 <!-- CIRCUITIKZ FIGURE: Render from LaTeX source as media/prelab-rc-1.png -->
 <img src="media/prelab-rc-1.png" alt="Circuit diagram of a series RC circuit for prelab analysis. A square wave voltage source of 4 volts peak-to-peak connects from ground upward, then current flows right through a 2.2 kilohm resistor, then continues right through a 1 microfarad capacitor back down to ground. A ground symbol is placed at the bottom junction. The output voltage Vo is labeled at the node between the resistor and the capacitor, indicating that the capacitor voltage is the measured output." style="width: 60%; display: block; margin: 0 auto;" />
@@ -118,7 +118,7 @@ For the following deliverables, assume the capacitor is initially uncharged and 
 
 > **Interactive Widget: RL Transient Response**
 >
-> Use the [**RL Interactive Widget**](https://andreknoesen.github.io/eec1-widgets/RL_Interactive.html) to explore how the inductor current rises and decays as you vary $R$ and $L$. Work through the deliverables below on your own first; then use the widget to check your thinking.
+> Use the <a href="https://aknoesen.github.io/eec1-widgets/RL_Interactive.html" target="_blank" rel="noopener noreferrer"><strong>RL Interactive Widget</strong></a> to explore how the inductor current rises and decays as you vary $R$ and $L$. Work through the deliverables below on your own first; then use the widget to check your thinking.
 
 <!-- CIRCUITIKZ FIGURE: Render from LaTeX source as media/prelab-rl-1.png -->
 <img src="media/prelab-rl-1.png" alt="Circuit diagram of a series RL circuit for prelab analysis. A square wave voltage source of 4 volts peak-to-peak connects from ground upward, then current flows right through a 1 millihenry inductor in series with its winding resistance RL, then continues right through a 100 ohm sense resistor back down to ground. A ground symbol is placed at the bottom junction. The inductor current IL is labeled at the node between RL and the 100 ohm resistor. RL represents the parasitic winding resistance of the inductor, on the order of 100 ohms." style="width: 80%; display: block; margin: 0 auto;" />
@@ -158,7 +158,7 @@ Components for RC circuit:
 
 1. Set up the series RC circuit shown in Figure 5 on your solderless breadboard with component values $R = 2.2~\text{k}\Omega$ and $C = 1~\mu\text{F}$.
 
-2. Measure the resistance of $R$. Measure the capacitance of $C$ (see [**Measuring Capacitance with a Multimeter**](https://drive.google.com/file/d/1bbq8x2qO2SVNvI8vk4P20AJ2q68jkg8e/view?usp=sharing)). Record your results in Table 1.
+2. Measure the resistance of $R$. Measure the capacitance of $C$ (see <a href="https://drive.google.com/file/d/1bbq8x2qO2SVNvI8vk4P20AJ2q68jkg8e/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>Measuring Capacitance with a Multimeter</strong></a>). Record your results in Table 1.
 
    | **Part** | **Part value** | **Measured value** | **Measurement Error** |
    |----------|----------------|--------------------|-----------------------|
@@ -174,7 +174,7 @@ Components for RC circuit:
 <!-- CIRCUITIKZ FIGURE: Render from LaTeX source as media/rc-setup-1.png -->
 <img src="media/rc-setup-1.png" alt="Circuit diagram of the RC circuit experimental setup. A square wave source connects in series with a 50 ohm internal generator resistance RG, feeding into a node where Channel 1 oscilloscope probes the input signal between that node and ground. From the same node, current flows through a 2.2 kilohm resistor to a second node, then through a 1 microfarad capacitor to ground. Channel 2 oscilloscope probes the output voltage across the capacitor between the second node and ground." style="width: 60%; display: block; margin: 0 auto;" />
 
-*Figure 5: RC circuit experimental setup. The signal generator has an internal resistance of approximately $R_G = 50~\Omega$. Since this internal resistance is approximately 2% of the $2.2~\text{k}\Omega$ series resistance in the circuit, its contribution to the overall time constant is negligible and can be disregarded. Contrast this with the RL experiment, where $R_G$ cannot be ignored. See Section 5.6 of [**ECE Confidential: Cracking the Code**](https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing).*
+*Figure 5: RC circuit experimental setup. The signal generator has an internal resistance of approximately $R_G = 50~\Omega$. Since this internal resistance is approximately 2% of the $2.2~\text{k}\Omega$ series resistance in the circuit, its contribution to the overall time constant is negligible and can be disregarded. Contrast this with the RL experiment, where $R_G$ cannot be ignored. See Section 5.6 of <a href="https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>ECE Confidential: Cracking the Code</strong></a>.*
 
 3. Connect the M2K to your computer and launch the Scopy software.
 
@@ -189,7 +189,7 @@ Components for RC circuit:
 
 #### Procedure
 
-1. Generate a square wave on channel 1 of the signal generator with 4 V amplitude peak-to-peak. Look at the measured value of peak-to-peak amplitude, not the setting on the generator. Why? (See Section 5.6 of [**ECE Confidential: Cracking the Code**](https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing).)
+1. Generate a square wave on channel 1 of the signal generator with 4 V amplitude peak-to-peak. Look at the measured value of peak-to-peak amplitude, not the setting on the generator. Why? (See Section 5.6 of <a href="https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>ECE Confidential: Cracking the Code</strong></a>.)
 
 2. **Case 1 (pulse width $\approx 15\tau$):** Estimate $\tau$ from the measured component values ($\tau = RC$). Set the frequency such that the capacitor has enough time to fully charge and discharge during each cycle of the square wave; let the pulse width be at least $15\tau_\text{estimated}$ and set the frequency accordingly.
 
@@ -206,7 +206,7 @@ Components for RC circuit:
 4. **Case 3 (pulse width $= 5\tau$):** Using $\tau_\text{estimated}$ from Case 1, set the frequency so that the pulse width equals $5\tau$. You should observe a waveform such as shown in Figure 6.
 
 <img src="media/Waveformsforpulsewidthequalto5tRC.png" alt="Scopy oscilloscope screenshot showing the transient response of an RC circuit with a pulse width equal to 5 time constants. The orange trace shows the input square wave on Channel 1 switching between 0 V and approximately 1 V. The blue trace shows the capacitor voltage on Channel 2, displaying the characteristic exponential charging curve rising from 0 V toward 1 V when the input goes high, and the exponential discharging curve falling back toward 0 V when the input goes low. The time base is 2 milliseconds per division." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 6: Waveform for a pulse width equal to $5\tau$. The blue trace shows the exponential capacitor charge and discharge response to the orange input square wave. The 0.63 V annotation marks the voltage level reached after one time constant $\tau$. Source: [**Transient Response of an RC Circuit, ADALM2000**](https://wiki.analog.com/university/courses/electronics/rc_transient_response)*
+   *Figure 6: Waveform for a pulse width equal to $5\tau$. The blue trace shows the exponential capacitor charge and discharge response to the orange input square wave. The 0.63 V annotation marks the voltage level reached after one time constant $\tau$. Source: <a href="https://wiki.analog.com/university/courses/electronics/rc_transient_response" target="_blank" rel="noopener noreferrer"><strong>Transient Response of an RC Circuit, ADALM2000</strong></a>*
 
    > **Lab Deliverable #1e**
    >
@@ -283,7 +283,7 @@ Components for RL circuit:
 
 #### Procedure
 
-1. Generate a square wave with 4 V amplitude peak-to-peak. (See Section 5.6 of [**ECE Confidential: Cracking the Code**](https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing).)
+1. Generate a square wave with 4 V amplitude peak-to-peak. (See Section 5.6 of <a href="https://drive.google.com/file/d/1ISGDHcR_3hFokHTPRgkjkftC0ny9xXld/view?usp=sharing" target="_blank" rel="noopener noreferrer"><strong>ECE Confidential: Cracking the Code</strong></a>.)
 
 2. **Case 1 (pulse width $\approx 15\tau$):** Using $\tau_\text{expected}$ from Deliverable 2a, set the generator frequency so that the pulse width equals $15\tau_\text{expected}$. The inductor should have enough time to fully charge and discharge within each half-cycle.
 
@@ -298,7 +298,7 @@ Components for RL circuit:
 3. **Case 2 (pulse width $= 5\tau$):** Using $\tau_\text{expected}$ from Deliverable 2a, set the frequency so that the pulse width equals $5\tau_\text{expected}$. You should observe waveforms similar to those shown in Figure 9, with characteristic inductive spikes at each transition.
 
 <img src="media/Waveformsforpulsewidthequalto5tRL.png" alt="Scopy oscilloscope screenshot showing the transient response of an RL circuit with a pulse width equal to 5 time constants. The orange trace shows the input square wave on Channel 1. The blue trace on Channel 2 shows the inductor current waveform, with a sharp positive spike at the rising edge and a sharp negative spike at the falling edge, followed by exponential decay. The time base is 1 ms per division." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 9: Expected waveform for pulse width $= 5\tau$: the blue trace shows the inductor current response across the sense resistor, with inductive spikes at each square wave transition. Source: [**Transient Response of an RL Circuit, ADALM2000**](https://wiki.analog.com/university/courses/electronics/rl_transient_response)*
+   *Figure 9: Expected waveform for pulse width $= 5\tau$: the blue trace shows the inductor current response across the sense resistor, with inductive spikes at each square wave transition. Source: <a href="https://wiki.analog.com/university/courses/electronics/rl_transient_response" target="_blank" rel="noopener noreferrer"><strong>Transient Response of an RL Circuit, ADALM2000</strong></a>*
 
    > **Lab Deliverable #2e**
    >

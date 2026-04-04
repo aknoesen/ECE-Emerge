@@ -57,39 +57,46 @@ To support new packages in future labs, add to `STANDALONE_PREAMBLE` and
 
 ## Lab Source Files
 
-All relative to `C:\Users\aknoesen\Documents\Knoesen\EEC1 Spring 2026\`:
+`tikz_figures.tex` in each lab's ADA directory is the canonical source for
+PNG generation — **not** the original `LabNInstructions.tex` files.
+
+All relative to `C:\Users\aknoesen\Documents\Knoesen\EEC1 Spring 2026\ADA Compliant Webpage Materials\Lab Manuals\`:
 
 | Lab | Source `.tex` | Output `media/` | Figures |
 |-----|--------------|-----------------|:-------:|
-| 1 | `Labs\Lab 1\Lab1Instructions.tex` | `Lab1\media` | 2 |
-| 2 | `Labs\Lab 2\Lab2Instructions.tex` | `Lab2\media` | 6 |
-| 3 | `Labs\Lab 3\Lab3Instructions.tex` | `Lab3\media` | 7 |
-| 4 | `Labs\Lab 4\Lab4Instructions.tex` | `Lab4\media` | 7 |
-| 5 | `Labs\Lab 5\Lab5Instructions.tex` | `Lab5\media` | 3 |
-| 6 | `Labs\Lab 6 & 7 Operational Amplifiers\Lab6Instructions.tex` | `Lab6\media` | 5 |
-| 7 | `Labs\Lab 6 & 7 Operational Amplifiers\Lab7Instructions.tex` | `Lab7\media` | 3 |
-| 8 | `Project\Lab8Instructions.tex` | `Lab8\media` | 1 |
+| 1 | `Lab1\tikz_figures.tex` | `Lab1\media` | 2 |
+| 2 | `Lab2\tikz_figures.tex` | `Lab2\media` | 6 |
+| 3 | `Lab3\tikz_figures.tex` | `Lab3\media` | 7 |
+| 4 | `Lab4\tikz_figures.tex` | `Lab4\media` | 7 |
+| 5 | `Lab5\tikz_figures.tex` | `Lab5\media` | 3 |
+| 6 | `Lab6\tikz_figures.tex` | `Lab6\media` | 5 |
+| 7 | `Lab7\tikz_figures.tex` | `Lab7\media` | 3 |
+| 8 | `Lab8\tikz_figures.tex` | `Lab8\media` | 1 |
 
-## Known Issues (as of 2026-03-25)
+**Important:** Each `tikz_figures.tex` must have `\label{fig:...}` inside every
+`\begin{figure}` environment — the script uses this to name the PNG files.
+The display heading `\noindent\textbf{Label:} \texttt{fig:...}` is for human
+reference only and is not read by the script.
+
+## Known Issues (as of 2026-03-26)
 
 - **Lab 4 — duplicate label `fig:rl-setup`**: two distinct figures share the
   same label; `rl-setup-1.png` is overwritten by the second. Fix the label in
-  `Lab4Instructions.tex` and re-run.
+  `Lab4\tikz_figures.tex` and re-run.
 - **Lab 5 — subfigure**: the first figure uses `\begin{subfigure}` internally;
-  only the first TikZ env is captured. Verify `fig_01-1.png`. May need the
+  only the first TikZ env is captured. Verify output. May need the
   source split into separate `\begin{figure}` environments.
 - **Lab 2 — label with `.png`**: `\label{fig:Lab3Fig1.png}` produces the
   filename `Lab3Fig1_png-1.png`. Consider renaming the label in the source.
 
 ## Workflow for Editing a Circuit
 
-1. Open `LabN/tikz_figures.tex` — find the figure by its `\label` heading
+1. Open `LabN/tikz_figures.tex` — find the figure by its label heading
 2. Edit the TikZ code; compile with `pdflatex tikz_figures.tex` to preview
-3. Copy the edited block back into `LabNInstructions.tex`
-4. Re-run the script to regenerate the PNG:
+3. Re-run the script to regenerate the PNG:
    ```
    python "...\Lab Manuals\extract_tikz_figures.py" ^
-     "...\LabNInstructions.tex" ^
+     "...\Lab Manuals\LabN\tikz_figures.tex" ^
      "...\Lab Manuals\LabN\media"
    ```
 

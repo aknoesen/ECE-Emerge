@@ -2,7 +2,7 @@
 
 **Department of Electrical and Computer Engineering**
 
-**Spring 2025** *(Note: Acknowledgment: The lab was derived from [Simple Op Amps, For ADALM2000 by Doug Mercer](https://wiki.analog.com/university/courses/electronics/electronics-lab-1))*
+**Spring 2025** *(Note: Acknowledgment: The lab was derived from <a href="https://wiki.analog.com/university/courses/electronics/electronics-lab-1" target="_blank" rel="noopener noreferrer">Simple Op Amps, For ADALM2000 by Doug Mercer</a>)*
 
 ---
 

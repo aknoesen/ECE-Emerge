@@ -141,7 +141,7 @@ Test your understanding with these questions:
 
 ## 10. Useful References
 
-- **Keysight EDU34450A User's Guide:** Consult the user manual for specific instructions on using the DMM's resistance measurement function. This is the most important reference. You can find it on the Keysight website: [EDU34450A Digital Multimeter User's Guide](https://www.keysight.com/us/en/assets/9921-01392/user-manuals/EDU3445A). In particular, look at 2-wire resistance measurements.
+- **Keysight EDU34450A User's Guide:** Consult the user manual for specific instructions on using the DMM's resistance measurement function. This is the most important reference. You can find it on the Keysight website: <a href="https://www.keysight.com/us/en/assets/9921-01392/user-manuals/EDU3445A" target="_blank" rel="noopener noreferrer">EDU34450A Digital Multimeter User's Guide</a>. In particular, look at 2-wire resistance measurements.
 - **SparkFun Electronics:** <https://www.sparkfun.com/> (Excellent tutorials and resources on electronics, including multimeter usage and breadboarding.)
 - **Adafruit:** <https://www.adafruit.com/> (Similar to SparkFun, with helpful guides.)
 

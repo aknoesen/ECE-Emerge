@@ -235,7 +235,7 @@ In this lab, you will be making various measurements, and it is crucial to under
 
 *Figure 4: Measurement analogy: High precision refers to how consistently repeated measurements cluster together, regardless of whether they are near the true value. Resolution represents the smallest increment a measuring instrument can detect. The top right bullseye demonstrates both excellent precision and accuracy. The top left shows good accuracy but poor precision. When making real-world measurements, you do not know the true value beforehand; you must rely on your instrument's precision and accuracy capabilities to estimate it.*
 
-For each of the five concepts below, provide a concise definition in your own words and explain how it relates to the measurements you will be making in Lab 2.
+For each of the five concepts below, provide a concise definition **in your own words** and explain how it relates to the measurements you will be making in Lab 2.
 
 > **Prelab Deliverable #17**
 >
@@ -287,7 +287,7 @@ Follow up with:
 
 **Data Analysis.**
 
-Download a dataset of measured resistors, specified to be 10% tolerance, of 820 Ω, 1 kΩ, and 1.2 kΩ resistors (same values that you will use in the lab): [Measured\_Resistances](https://raw.githubusercontent.com/AndreKnoesen/eec1-widgets/main/Measure_Resistance_Values.csv).
+Download a dataset of measured resistors, specified to be 10% tolerance, of 820 Ω, 1 kΩ, and 1.2 kΩ resistors (same values that you will use in the lab): <a href="https://raw.githubusercontent.com/AndreKnoesen/eec1-widgets/main/Measure_Resistance_Values.csv" target="_blank" rel="noopener noreferrer">Measured\_Resistances</a>.
 
 Open MATLAB and use the **Import Data** app (found under the Home tab) to load the CSV file into your workspace. The app will guide you through selecting columns and previewing the data before importing; no code is required for this step.
 
@@ -297,8 +297,18 @@ Once the data is in your workspace, write a script yourself, or use MATLAB's bui
 - Plot a histogram using `histogram()`
 
 Read and understand every line of code the AI produces before running it. If something is unclear, ask the AI to explain it. Do not submit code you cannot explain.
+> **Prelab Deliverable #22**
+>
+> Submit images of the three histograms, one for each of the three resistors.
+>
+
 
 **Self-Test.** Open Gemini and write your own quiz prompt using the class data as the scenario. Your questions must involve interpreting the measured distributions: for example, predicting how many resistors in a batch would fail a 5% tolerance test (instead of the given 10%) given the calculated standard deviation, or explaining what the histogram shape reveals about the manufacturing process.
+
+> **Prelab Deliverable #23**
+>
+> Submit a screenshot of the full quiz transcript, capturing your knowledge check interaction with the AI. Upload via the course submission app.
+
 
 Apply the meta-prompt from *A Mind Worth Questioning* to evaluate and strengthen your draft, then run the quiz.
 
@@ -310,17 +320,18 @@ Your written synthesis must address all three of the following points:
 - **The Technical "Why"** — Use the class data to explain the relationship between the mean value, the nominal value, and the manufacturer's tolerance specification.
 - **The Lab Application** — A specific moment where the histograms changed how you think about a simple component: for example, recognizing that "1000 Ω" describes a distribution, not a fixed value.
 
-> **Prelab Deliverable #22**
->
-> Submit images of the three histograms, one for each of the three resistors.
 
-> **Prelab Deliverable #23**
->
-> Submit a screenshot of the full quiz transcript, capturing your knowledge check interaction with the AI. Upload via the course submission app.
+
+
+
+
 
 > **Prelab Deliverable #24**
 >
 > Submit your formal reflection (150–250 words) addressing The Link, The Technical "Why", and The Lab Application. Upload via the course submission app.
+>
+> In this activity, reflect on what the data revealed about resistor values. Explain how the spread of the measurements (standard deviation) contributes to uncertainty in circuit behavior, and relate the measured average and variation to the ideas of nominal value and manufacturer tolerance. Most importantly, describe how viewing the histogram changed your understanding—specifically, how it helped you recognize that a resistor’s labeled value represents a range of real values rather than a single guaranteed number—and explain why this matters for practical engineering decisions.
+
 
 ---
 
@@ -356,7 +367,7 @@ While you already made such measurements in the previous lab, re-measure the res
 
 In this section, you will work with a simple resistor network consisting of two resistors connected in series. You will use the M2K to make single-ended and differential voltage measurements and then apply Ohm's Law and Kirchhoff's Laws to analyze the circuit.
 
-In addition to using the M2K, also use the Keysight EDU34450A DMM to measure the same voltages and confirm that both instruments give consistent results. See: [How to Measure DC Voltage with Keysight EDU34450A Multimeter](https://andreknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/DCVoltageMeasurement.html)
+In addition to using the M2K, also use the Keysight EDU34450A DMM to measure the same voltages and confirm that both instruments give consistent results. See: <a href="https://aknoesen.github.io/ECE-Emerge/EquipmentInstructions/htmlconversion/DCVoltageMeasurement.html" target="_blank" rel="noopener noreferrer">How to Measure DC Voltage with Keysight EDU34450A Multimeter</a>
 
 #### Build the Circuit
 
@@ -367,7 +378,7 @@ Construct the following circuit on your breadboard:
 
 *Figure 5: Resistive network #1.*
 
-> **Lab Deliverable #2a**
+> **Lab Deliverable #2**
 >
 > Take a clear photo of your breadboard with the circuit built. Your name must be visible in the photo: place a piece of paper with your name written on it in the frame before photographing, or add it using an image editor. Label the components and connections clearly.
 
@@ -378,11 +389,11 @@ Use the M2K voltmeter to measure the following voltages:
 - $V_{ac}$: Voltage between point $V_a$ and ground ($V_c$)
 - $V_{bc}$: Voltage between point $V_b$ and ground ($V_c$)
 
-> **Lab Deliverable #2b**
+> **Lab Deliverable #3**
 >
 > Record the measured values of $V_{ac}$ and $V_{bc}$, including measurement error. The measurement error is indicated by the lowest digit(s) that are not stable.
 
-> **Lab Deliverable #2c**
+> **Lab Deliverable #4**
 >
 > Calculate the voltage across $R_2 = 820\,\Omega$ ($V_{ab}$) using the measured values of $V_{ac}$ and $V_{bc}$.
 
@@ -390,17 +401,17 @@ Use the M2K voltmeter to measure the following voltages:
 
 Use the M2K voltmeter to measure the differential voltage between points $V_a$ and $V_b$ directly.
 
-> **Lab Deliverable #2d**
+> **Lab Deliverable #5**
 >
 > Record the value of $V_{ab}$ measured differentially, including measurement error.
 
 #### Compare Single-Ended and Differential Measurements
 
-> **Lab Deliverable #2e**
+> **Lab Deliverable #6**
 >
 > Compare the value of $V_{ab}$ you calculated from the single-ended measurements ($V_{ac}$ and $V_{bc}$) with the value you measured directly using the differential measurement. Use KVL to explain the comparison. Are they the same? If not, why might there be a difference?
 
-> **Lab Deliverable #2f**
+> **Lab Deliverable #7**
 >
 > Based on your observations, which method (single-ended or differential) do you think is more accurate for measuring $V_{ab}$ in this circuit? Why?
 
@@ -419,7 +430,7 @@ Add resistor $R_3 = 1.0\,\text{k}\Omega$ in parallel with $R_2 = 820\,\Omega$ in
 
 *Figure 6: Resistive network #2. Note that grounds are not explicitly shown in this circuit. You need to decide where to place them. Hint: See Figure 5.*
 
-> **Lab Deliverable #3a**
+> **Lab Deliverable #8**
 >
 > Take a clear photo of your breadboard with the modified circuit. Your name must be visible in the photo. Label the components and connections clearly.
 
@@ -427,13 +438,17 @@ Add resistor $R_3 = 1.0\,\text{k}\Omega$ in parallel with $R_2 = 820\,\Omega$ in
 
 Use the M2K voltmeter to measure the necessary voltages to determine the currents in the different branches of the circuit.
 
-> **Lab Deliverable #3b**
+> **Lab Deliverable #9**
 >
 > Describe the voltage measurements you made and explain how you used them to determine $I_{3}$, $I_{3a}$, $I_{3b}$, and $I_{3c}$.
 
-> **Lab Deliverable #3c**
+> **Lab Deliverable #10**
 >
 > Record the calculated currents $I_{3}$, $I_{3a}$, $I_{3b}$, and $I_{3c}$ obtained from the voltage measurements. Include measurement error estimates based on the errors in the resistor and voltage measurements.
+
+> **Lab Deliverable #11**
+>
+> Using the currents from Deliverable 10, verify KCL at the top node numerically: check whether $I_{3a} + I_{3b} = I_{3}$ holds within your estimated measurement error bounds. Record the numerical check.
 
 ---
 
@@ -445,28 +460,30 @@ In this part, you will use the M2K to generate periodic signals, visualize them 
 
 1. To view the generated signals, connect the signal generators to the oscilloscope as shown in Figure 7. Make the connections on the breadboard.
 
-   > **Lab Deliverable #4a**
+   > **Lab Deliverable #12**
    >
    > Take a photo of the breadboard connections. Your name must be visible in the photo.
 
    <!-- CIRCUITIKZ FIGURE: Render from LaTeX source as media/fig_signal_gen_config.png -->
 <img src="media/labConnnection1-1.png" alt="Two side-by-side circuit diagrams showing the M2K signal generation and measurement configuration for single-ended measurements. Left circuit: the W1 analog output signal generator connects to node Ch1-plus on the oscilloscope input. Ch1-minus and the signal generator internal ground are both tied to circuit ground, forming a single-ended measurement of the W1 output signal. Right circuit: identical configuration for the second channel, with W2 analog output connected to Ch2-plus, and Ch2-minus tied to ground along with the W2 internal ground." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 7: M2K signal generation channels and oscilloscope channels. This configuration creates single-ended measurements of the generated signals.*
+
+*Figure 7: M2K signal generation channels and oscilloscope channels. This configuration creates single-ended measurements of the generated signals.*
 
 2. On Signal Generator 1 and 2, generate a 10 Hz sine wave with a 2 V peak-to-peak amplitude and no DC offset. Adjust the phase such that a *cosine* wave is generated by Signal Generator 1 (the orange display) and a *sine* wave by Signal Generator 2 (the purple display). Adjust the linewidth on the oscilloscope display to a minimum of 2 units. **Activate signal generation by selecting the Run button.**
 
-   > **Lab Deliverable #4b**
+   > **Lab Deliverable #13**
    >
    > Capture a screenshot of the signal generator display and submit it via the course submission app.
 
 3. Display the signals on Channel 1 and Channel 2 of the oscilloscope. The vertical axis Volts/div settings and horizontal timebase setting should be the same for both channels. Ensure that at least 2 periods of the signals are visible. Trigger on Channel 1 at the rising edge to ensure steady traces. Adjust the linewidth to a minimum of 2 units. Use the Measure icon to display signal measurements. Figure 8 shows an example of what your display should look like; yours may differ. Indicated on the figure are time reference points $t=0$, $t=T/4$, $t=T/2$, $t=3T/4$, and $t=T$ along the waveform period $T=1/f$, where $f$ is the signal frequency.
 
-   > **Lab Deliverable #4c**
+   > **Lab Deliverable #14**
    >
    > Take a screenshot that shows the oscilloscope traces and also shows the timebase and vertical scale settings for one of the channels. Submit it via the course submission app.
 
 <img src="media/Lab3OscilloscopeTraces.png" alt="Scopy oscilloscope screenshot showing two sinusoidal waveforms over approximately two full periods. The orange waveform and the blue waveform are the same frequency of 10 Hz with a period of 100 milliseconds and peak-to-peak amplitude of approximately 1.88 V, but are offset in phase relative to each other. Yellow vertical marker lines are labeled at five points across one period: t equals 0, t equals T over 4, t equals T over 2, t equals 3T over 4, and t equals T." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 8: Oscilloscope trace example. Yellow markers were added to the Scopy display to indicate over a period $T$ where $t=0$, $t=T/4$, $t=T/2$, $t=3T/4$, and $t=T$ occur.*
+
+*Figure 8: Oscilloscope trace example. Yellow markers were added to the Scopy display to indicate over a period $T$ where $t=0$, $t=T/4$, $t=T/2$, $t=3T/4$, and $t=T$ occur.*
 
 #### Export Data to CSV
 
@@ -477,17 +494,20 @@ Stay in the Oscilloscope tab and export the captured sine and cosine waves at 10
 2. Click the Single button in the top right corner to capture one sweep of data using the new sample rate. Make sure the signal is well captured like the one in Figure 9.
 
 <img src="media/Export1.png" alt="Scopy oscilloscope screenshot showing a sinusoidal waveform on Channel 1. Two red highlighted boxes draw attention to the sample rate display and the Memory Depth field set to 1000." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 9: Scopy oscilloscope display showing how to adjust the sample rate. The red boxes highlight the sample rate indicator in the toolbar and the Memory Depth setting in the right panel.*
+
+*Figure 9: Scopy oscilloscope display showing how to adjust the sample rate. The red boxes highlight the sample rate indicator in the toolbar and the Memory Depth setting in the right panel.*
 
 3. Click the Gear icon and use the Channels drop-down menu to select both Channel 1 and Channel 2 for export.
 
 <img src="media/Export2.png" alt="Scopy oscilloscope screenshot showing the export configuration panel. Two red highlighted boxes draw attention to the gear icon and the Channels dropdown menu." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 10: Scopy oscilloscope export settings. Click the gear icon to open the export panel, select Channels from the dropdown, then check both Channel 1 and Channel 2 before exporting.*
+
+*Figure 10: Scopy oscilloscope export settings. Click the gear icon to open the export panel, select Channels from the dropdown, then check both Channel 1 and Channel 2 before exporting.*
 
 4. Click the Export button and name the CSV file `lab2_TY_100ksps_ch1_ch2.csv`.
 
 <img src="media/Export10.png" alt="Scopy oscilloscope screenshot showing the Export button highlighted in red in the right settings panel." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 11: Steps to export CSV for signal in time domain. After selecting both channels, click the highlighted Export button to save the data.*
+
+*Figure 11: Steps to export CSV for signal in time domain. After selecting both channels, click the highlighted Export button to save the data.*
 
 5. Inspect the CSV file.
    1. Line 4 shows the number of samples captured by the oscilloscope.
@@ -500,9 +520,10 @@ Stay in the Oscilloscope tab and export the captured sine and cosine waves at 10
    4. The waves can be reconstructed in MATLAB by plotting and connecting all sample points recorded in the CSV file. You will analyze the YT data during the post-lab.
 
 <img src="media/Export4.png" alt="Screenshot of the first lines of a Scopy-exported CSV file. Line 4: number of samples 1600. Line 5: sample rate 100000. Line 8: column headers Sample, Time in seconds, CH1 in volts, CH2 in volts. Lines 9 through 11: first three data rows." style="width: 60%; display: block; margin: 0 auto;" />
-   *Figure 12: `lab2_TY_100ksps_ch1_ch2.csv` lines 4–11, showing the Scopy CSV header metadata and the first three data rows.*
 
-> **Lab Deliverable #4d**
+*Figure 12: `lab2_TY_100ksps_ch1_ch2.csv` lines 4–11, showing the Scopy CSV header metadata and the first three data rows.*
+
+> **Lab Deliverable #15**
 >
 > Export the data from the oscilloscope to a CSV file. Take a screenshot showing the export process and the saved file.
 
@@ -524,11 +545,11 @@ Set the oscilloscope to XY mode:
 
 *Figure 13: Enabling XY mode in Scopy. Click the X-Y button in the toolbar, then set X-Axis to CH1 and Y-Axis to CH2 in the settings panel.*
 
-> **Lab Deliverable #5a**
+> **Lab Deliverable #16**
 >
 > Take a screenshot of the XY oscilloscope display showing the Lissajous pattern and submit it via the course submission app.
 
-> **Lab Deliverable #5b**
+> **Lab Deliverable #17**
 >
 > On your captured XY plot, annotate the following and submit the annotated image:
 >
@@ -567,28 +588,28 @@ In the video <https://www.youtube.com/watch?v=p3qvsSAwmu4>, various scenarios ar
 >    - [ ] Deliverable 1: Table of measured resistor values with error estimates
 >
 > 2. **Resistor Network #1 (Two Resistors in Series)**
->    - [ ] Deliverable 2a: Photo of series resistor circuit
->    - [ ] Deliverable 2b: Recorded values of $V_{ac}$ and $V_{bc}$
->    - [ ] Deliverable 2c: Calculated $V_{ab}$
->    - [ ] Deliverable 2d: Differential measurement of $V_{ab}$
->    - [ ] Deliverable 2e: Comparison of single-ended and differential measurement methods
->    - [ ] Deliverable 2f: Judgment on which method is more accurate
+>    - [ ] Deliverable 2: Photo of series resistor circuit
+>    - [ ] Deliverable 3: Recorded values of $V_{ac}$ and $V_{bc}$
+>    - [ ] Deliverable 4: Calculated $V_{ab}$
+>    - [ ] Deliverable 5: Differential measurement of $V_{ab}$
+>    - [ ] Deliverable 6: Comparison of single-ended and differential measurement methods
+>    - [ ] Deliverable 7: Judgment on which method is more accurate
 >
 > 3. **Resistor Network #2 (Two Resistors in Series and One in Parallel)**
->    - [ ] Deliverable 3a: Photo of modified circuit
->    - [ ] Deliverable 3b: Description of voltage measurements
->    - [ ] Deliverable 3c: Calculated branch currents $I_3$, $I_{3a}$, $I_{3b}$, $I_{3c}$
->    - [ ] Deliverable 3d: KCL verification
+>    - [ ] Deliverable 8: Photo of modified circuit
+>    - [ ] Deliverable 9: Description of voltage measurements
+>    - [ ] Deliverable 10: Calculated branch currents $I_3$, $I_{3a}$, $I_{3b}$, $I_{3c}$
+>    - [ ] Deliverable 11: KCL verification
 >
 > 4. **Generating and Visualizing Periodic Signals**
->    - [ ] Deliverable 4a: Photo of breadboard connections
->    - [ ] Deliverable 4b: Signal generator screenshot
->    - [ ] Deliverable 4c: Oscilloscope screenshot with scale settings visible
->    - [ ] Deliverable 4d: CSV export screenshot and saved file
+>    - [ ] Deliverable 12: Photo of breadboard connections
+>    - [ ] Deliverable 13: Signal generator screenshot
+>    - [ ] Deliverable 14: Oscilloscope screenshot with scale settings visible
+>    - [ ] Deliverable 15: CSV export screenshot and saved file
 >
 > 5. **XY Oscilloscope Display**
->    - [ ] Deliverable 5a: XY plot screenshot
->    - [ ] Deliverable 5b: Annotated XY plot with time points and direction of rotation
+>    - [ ] Deliverable 16: XY plot screenshot
+>    - [ ] Deliverable 17: Annotated XY plot with time points and direction of rotation
 >
 > 6. **Notes and Observations**
 >    - [ ] Recorded any challenges encountered during the lab
@@ -653,13 +674,15 @@ Using the resistor values from Deliverable 1 and Ohm's Law, calculate the theore
 
 > **Lab Deliverable #19**
 >
-> Discuss the sources of discrepancy between your measured and theoretical values. Which method (single-ended or differential) produced a $V_{ab}$ closer to the theoretical prediction? Does this match the judgment you made in Deliverable 2f during the lab? Explain why one method would be expected to agree more closely with theory.
+> Discuss the sources of discrepancy between your measured and theoretical values. Which method (single-ended or differential) produced a $V_{ab}$ closer to the theoretical prediction? Does this match the judgment you made in Deliverable 7 during the lab? Explain why one method would be expected to agree more closely with theory.
+> 
+> In this activity, reflect on how the method of measurement affects accuracy. Explain why measuring $V_{ab}$​ using a single‑ended approach requires subtracting two voltage measurements, each with its own uncertainty, and how this causes the errors to accumulate in the final result. Compare this with differential measurement, where $V_{ab}$​​ is measured directly with a single source of measurement error. Finally, explain how this difference helps account for why differential measurements more closely agree with theoretical predictions when measuring voltages that are not referenced to ground.
 
 #### KCL Verification
 
 > **Lab Deliverable #20**
 >
-> Using the current values from Deliverable 3c, verify KCL quantitatively. Check whether $I_{3a} + I_{3b} = I_3$ and whether $I_3 = I_{3c}$ within your estimated measurement error. Present the numerical check and explain any deviation that falls outside your error bounds.
+> Using the current values from Deliverable 10, verify KCL quantitatively. Check whether $I_{3a} + I_{3b} = I_3$ and whether $I_3 = I_{3c}$ within your estimated measurement error. Present the numerical check and explain any deviation that falls outside your error bounds.
 
 ---
 
@@ -667,7 +690,7 @@ Using the resistor values from Deliverable 1 and Ohm's Law, calculate the theore
 
 #### MATLAB Analysis of Captured Waveforms
 
-Load the CSV file you exported in Deliverable 4d into MATLAB. Plot both channels versus time on the same axes.
+Load the CSV file you exported in Deliverable 15 into MATLAB. Plot both channels versus time on the same axes.
 
 > **Lab Deliverable #21**
 >
@@ -697,8 +720,9 @@ Include your MATLAB plot as a figure in your report. Attach your MATLAB script.
 
 > **Lab Deliverable #24**
 >
-> Based on your results from this lab, explain what you would do differently in a future measurement to improve both accuracy and resolution. Identify at least two specific changes, and cite observations from your data to justify each one.
-
+> Based on your results from this lab, explain what you would do differently in a future measurement to improve both accuracy and resolution. Identify at least two specific changes, and cite observations from your data to justify each one. 
+> 
+> In this activity, reflect on how your measurement process could be improved in future experiments. Propose at least two specific, physically meaningful changes that would reduce measurement error or improve resolution. For each improvement, explain why it would help and explicitly connect it to an observation from your own data or results. Your response should demonstrate an understanding of how experimental limitations influence accuracy and how thoughtful changes to procedure can address those limitations.
 ---
 
 ## Submission Instructions
@@ -706,3 +730,6 @@ Include your MATLAB plot as a figure in your report. Attach your MATLAB script.
 > **IMPORTANT**
 >
 > Submit your completed work via the course submission app. All plots, images, data tables, and calculations must be clearly labeled and referenced in your post-lab report.
+
+
+Version:  1.0

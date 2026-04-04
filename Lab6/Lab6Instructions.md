@@ -2,7 +2,7 @@
 
 **Department of Electrical and Computer Engineering**
 
-**Spring 2026** *(Note: Acknowledgment: The lab was derived from [Simple Op Amps, For ADALM2000 by Doug Mercer](https://wiki.analog.com/university/courses/electronics/electronics-lab-1))*
+**Spring 2026** *(Note: Acknowledgment: The lab was derived from <a href="https://wiki.analog.com/university/courses/electronics/electronics-lab-1" target="_blank" rel="noopener noreferrer">Simple Op Amps, For ADALM2000 by Doug Mercer</a>)*
 
 ---
 
@@ -37,7 +37,7 @@ Before the lab session, read **Appendix A** (Circuit Construction and Debugging)
 
 > **Prelab Deliverable #1a**
 >
-> Referring to the [LMC662 datasheet](https://www.ti.com/lit/ds/symlink/lmc662.pdf) and Appendix B, complete the table below. For each parameter, record the datasheet value and write one sentence explaining what it means specifically for this lab: not a general definition, but a consequence for something you will build or measure.
+> Referring to the <a href="https://www.ti.com/lit/ds/symlink/lmc662.pdf" target="_blank" rel="noopener noreferrer">LMC662 datasheet</a> and Appendix B, complete the table below. For each parameter, record the datasheet value and write one sentence explaining what it means specifically for this lab: not a general definition, but a consequence for something you will build or measure.
 >
 > | **Parameter** | **Value** | **Practical meaning for Lab 6** |
 > |---|---|---|
@@ -519,7 +519,7 @@ Do not ask the TA to find the fault for you. Describe your debugging sequence an
 
 ## Appendix B: The LMC662 Operational Amplifier
 
-[**Data Sheet: LMC662**](https://www.ti.com/lit/ds/symlink/lmc662.pdf?). Open this before completing the prelab deliverables.
+<a href="https://www.ti.com/lit/ds/symlink/lmc662.pdf?" target="_blank" rel="noopener noreferrer"><strong>Data Sheet: LMC662</strong></a>. Open this before completing the prelab deliverables.
 
 ### B.1 Package and Pin Assignment
 
