@@ -83,7 +83,7 @@
 
     /* ── Images ── */
     img {
-      max-width: 95%;   /* hard cap — inline style controls actual width */
+      max-width: 70%;
       height: auto;
       display: block;
       margin: 1rem auto;
@@ -151,38 +151,14 @@
       outline: 3px solid #005a9c;
       outline-offset: 2px;
     }
-
-    /* ── CC license footer ── */
-    .cc-footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid #cccccc;
-      font-size: 0.85rem;
-      color: #555555;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .cc-footer img {
-      width: 88px;
-      height: auto;
-      display: inline;
-      margin: 0;
-      flex-shrink: 0;
-    }
-    .cc-footer a {
-      color: #00008B;
-    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
     onload="renderMathInElement(document.body, {
       delimiters: [
-        {left: '$$',  right: '$$',  display: true},
-        {left: '$',   right: '$',   display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
       ],
       throwOnError: false
     });"></script>
@@ -198,9 +174,9 @@
 * Fourier synthesis: how complex waveforms are built from sinusoids<br/>
 * The Nyquist criterion and the consequences of aliasing</p>
 <h3>Before the Lecture</h3>
-<p><strong>Pre-Lecture Reading:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInTime.html" rel="noopener noreferrer" target="_blank">Chapter 5 — Signals in Time</a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/SignalsInFrequency.html" rel="noopener noreferrer" target="_blank">Chapter 6 — Signals in Frequency</a></p>
+<p><strong>Pre-Lecture Reading:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/SignalsInTime.html" rel="noopener noreferrer" target="_blank">Chapter 5 — Signals in Time</a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/SignalsInFrequency.html" rel="noopener noreferrer" target="_blank">Chapter 6 — Signals in Frequency</a></p>
 <hr/>
 <h3>Pre-Lecture Assessments</h3>
 <p>After completing the reading for each chapter — and <strong>before attending lecture</strong> — you will take a short online quiz. Questions are drawn at random from a bank, so every attempt is different.</p>
@@ -233,7 +209,7 @@
 <hr/>
 <h2>Hands-On: Lab 3</h2>
 <h3>Before the Lab</h3>
-<p><strong>Lab Assignment:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Lab3/htmlconversion/Lab3Instructions.html" rel="noopener noreferrer" target="_blank">Lab 3 Instructions</a></p>
+<p><strong>Lab Assignment:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Lab3/htmlconversion/Lab3Instructions.html" rel="noopener noreferrer" target="_blank">Lab 3 Instructions</a></p>
 <p>In Lab 3, you will move beyond basic measurements to perform device characterization and frequency domain analysis.</p>
 <ul>
 <li><strong>Spectrum Analysis:</strong> Use the M2K Spectrum Analyzer to observe the spectral fingerprints of different waveforms.</li>
@@ -259,15 +235,6 @@
 <li><strong>Fourier Series</strong> — the synthesis view; which harmonics appear in square, triangle, and sawtooth waves; why triangle wave harmonics decay faster</li>
 <li><strong>Linearity and superposition</strong> — why superposition applies to linear circuits; what a nonlinear element does to a signal's spectrum</li>
 </ul>
-<footer aria-label="License information" class="cc-footer" role="contentinfo">
-<img alt="Creative Commons Attribution-NonCommercial 4.0 International License badge" src="../media/by_nc.png"/>
-<span>
-    This work is licensed under a
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-    Please attribute this work to André Knoesen.
-  </span>
-</footer>
-
   </main>
 </body>
 </html>

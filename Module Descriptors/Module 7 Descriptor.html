@@ -83,7 +83,7 @@
 
     /* ── Images ── */
     img {
-      max-width: 95%;   /* hard cap — inline style controls actual width */
+      max-width: 70%;
       height: auto;
       display: block;
       margin: 1rem auto;
@@ -151,38 +151,14 @@
       outline: 3px solid #005a9c;
       outline-offset: 2px;
     }
-
-    /* ── CC license footer ── */
-    .cc-footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid #cccccc;
-      font-size: 0.85rem;
-      color: #555555;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .cc-footer img {
-      width: 88px;
-      height: auto;
-      display: inline;
-      margin: 0;
-      flex-shrink: 0;
-    }
-    .cc-footer a {
-      color: #00008B;
-    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
     onload="renderMathInElement(document.body, {
       delimiters: [
-        {left: '$$',  right: '$$',  display: true},
-        {left: '$',   right: '$',   display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
       ],
       throwOnError: false
     });"></script>
@@ -198,8 +174,8 @@
 * DC level shifting: using a summing amplifier to move a signal into a desired voltage range<br/>
 * Real-world limits: output saturation and gain-bandwidth product</p>
 <h3>Before the Lecture</h3>
-<p><strong>Pre-Lecture Reading:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html" rel="noopener noreferrer" target="_blank">Chapter 10 — How Op-Amps Hide Complexity</a> (Section 2: Amplifier Configurations and Real-Device Limits)</p>
+<p><strong>Pre-Lecture Reading:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html" rel="noopener noreferrer" target="_blank">Chapter 10 — How Op-Amps Hide Complexity</a> (Section 2: Amplifier Configurations and Real-Device Limits)</p>
 <hr/>
 <blockquote>
 <p><strong>How to prepare:</strong> Use an AI tool to work through the checklist below. Ask it to explain each item, give you an example, then quiz you on it. When you can answer without looking, you are ready. ou will have <strong>15 minutes</strong> to complete the assessment.</p>
@@ -226,22 +202,13 @@
 <hr/>
 <h2>Hands-On: Lab 7</h2>
 <h3>Before the Lab</h3>
-<p><strong>Lab Assignment:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Lab7/htmlconversion/Lab7Instructions.html" rel="noopener noreferrer" target="_blank">Lab 7 Instructions</a></p>
+<p><strong>Lab Assignment:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Lab7/htmlconversion/Lab7Instructions.html" rel="noopener noreferrer" target="_blank">Lab 7 Instructions</a></p>
 <p>In Lab 7, you will design and build a summing amplifier that adds a DC offset to shift a signal into a target voltage range.</p>
 <ul>
 <li><strong>Summing Amplifier:</strong> Build an inverting summing amplifier, verify that each input contributes independently to the output, and confirm the expected gain for each channel.</li>
 <li><strong>Level Shifting:</strong> Apply a DC reference to one input and verify that the circuit shifts the signal into the required output range.</li>
 <li><strong>Saturation and Gain-Bandwidth:</strong> Observe output clipping when the signal exceeds the supply rails and measure how the amplifier's frequency response changes with gain.</li>
 </ul>
-<footer aria-label="License information" class="cc-footer" role="contentinfo">
-<img alt="Creative Commons Attribution-NonCommercial 4.0 International License badge" src="../media/by_nc.png"/>
-<span>
-    This work is licensed under a
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-    Please attribute this work to André Knoesen.
-  </span>
-</footer>
-
   </main>
 </body>
 </html>

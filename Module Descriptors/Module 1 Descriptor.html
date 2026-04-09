@@ -83,7 +83,7 @@
 
     /* ── Images ── */
     img {
-      max-width: 95%;   /* hard cap — inline style controls actual width */
+      max-width: 70%;
       height: auto;
       display: block;
       margin: 1rem auto;
@@ -151,38 +151,14 @@
       outline: 3px solid #005a9c;
       outline-offset: 2px;
     }
-
-    /* ── CC license footer ── */
-    .cc-footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid #cccccc;
-      font-size: 0.85rem;
-      color: #555555;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .cc-footer img {
-      width: 88px;
-      height: auto;
-      display: inline;
-      margin: 0;
-      flex-shrink: 0;
-    }
-    .cc-footer a {
-      color: #00008B;
-    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
     onload="renderMathInElement(document.body, {
       delimiters: [
-        {left: '$$',  right: '$$',  display: true},
-        {left: '$',   right: '$',   display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
       ],
       throwOnError: false
     });"></script>
@@ -198,10 +174,10 @@
 * Circuit schematics: nodes, branches, loops, and ground conventions<br/>
 * Responsible AI use as a learning tool in engineering</p>
 <h3>Before the Lecture</h3>
-<p><strong>Pre-Lecture Reading:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/AIPartner.html" rel="noopener noreferrer" target="_blank">AI Partner</a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/TheFlashlight.html" rel="noopener noreferrer" target="_blank">Chapter 1 — The Flashlight</a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html" rel="noopener noreferrer" target="_blank">Chapter 2 — Language of Circuits</a></p>
+<p><strong>Pre-Lecture Reading:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/AIPartner.html" rel="noopener noreferrer" target="_blank">AI Partner</a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/TheFlashlight.html" rel="noopener noreferrer" target="_blank">Chapter 1 — The Flashlight</a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/LanguageofCircuits.html" rel="noopener noreferrer" target="_blank">Chapter 2 — Language of Circuits</a></p>
 <hr/>
 <h3>Pre-Lecture Assessments</h3>
 <p>After completing the reading for each chapter — and <strong>before attending lecture</strong> — you will take a short online quiz. Questions are drawn at random from a bank, so every attempt is different.</p>
@@ -238,9 +214,9 @@
 <hr/>
 <h2>Hands-On: Lab 1</h2>
 <h3>Before the Lab</h3>
-<p><strong>Lab Assignment:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Lab1/htmlconversion/Lab1Instructions.html" rel="noopener noreferrer" target="_blank">Lab 1 Instructions</a></p>
-<p><strong>ECE Instructional Lab Safety Requirements:</strong> <a href="https://andreknoesen.github.io/eec1-widgets/ECE_Lab_Safety_Requirements.html" rel="noopener noreferrer" target="_blank">ECE Instructional Lab Safety Requirements</a></p>
-<p><strong>Soldering Training:</strong> <a href="https://andreknoesen.github.io/eec1-widgets/SolderTraining.html" rel="noopener noreferrer" target="_blank">Soldering Training</a></p>
+<p><strong>Lab Assignment:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Lab1/htmlconversion/Lab1Instructions.html" rel="noopener noreferrer" target="_blank">Lab 1 Instructions</a></p>
+<p><strong>ECE Instructional Lab Safety Requirements:</strong> <a href="https://aknoesen.github.io/eec1-widgets/ECE_Lab_Safety_Requirements.html" rel="noopener noreferrer" target="_blank">ECE Instructional Lab Safety Requirements</a></p>
+<p><strong>Soldering Training:</strong> <a href="https://aknoesen.github.io/eec1-widgets/SolderTraining.html" rel="noopener noreferrer" target="_blank">Soldering Training</a></p>
 <p>Read the Lab assignment, complete the ECE Instructional Lab Safety Requirements and Soldering Training modules, and complete their associated assessments before attending the lab.  In Lab 1, you will get your first hands-on experience with the ADALM2000 (M2K), the portable instrument you will use throughout the course as your oscilloscope, signal generator, power supply, and voltmeter.</p>
 <ul>
 <li><strong>Soldering:</strong> Build your UC Davis M2K Adaptor Board, developing a foundational engineering skill you will use for the rest of the term.</li>
@@ -270,15 +246,6 @@
 <li><strong>Open and short circuits</strong> — the effect of each on current flow in the surrounding circuit</li>
 <li><strong>Voltage and current conventions</strong> — applying correct polarity signs; marking conventional current direction given a source</li>
 </ul>
-<footer aria-label="License information" class="cc-footer" role="contentinfo">
-<img alt="Creative Commons Attribution-NonCommercial 4.0 International License badge" src="../media/by_nc.png"/>
-<span>
-    This work is licensed under a
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-    Please attribute this work to André Knoesen.
-  </span>
-</footer>
-
   </main>
 </body>
 </html>

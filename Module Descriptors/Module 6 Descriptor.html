@@ -83,7 +83,7 @@
 
     /* ── Images ── */
     img {
-      max-width: 95%;   /* hard cap — inline style controls actual width */
+      max-width: 70%;
       height: auto;
       display: block;
       margin: 1rem auto;
@@ -151,38 +151,14 @@
       outline: 3px solid #005a9c;
       outline-offset: 2px;
     }
-
-    /* ── CC license footer ── */
-    .cc-footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid #cccccc;
-      font-size: 0.85rem;
-      color: #555555;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .cc-footer img {
-      width: 88px;
-      height: auto;
-      display: inline;
-      margin: 0;
-      flex-shrink: 0;
-    }
-    .cc-footer a {
-      color: #00008B;
-    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
     onload="renderMathInElement(document.body, {
       delimiters: [
-        {left: '$$',  right: '$$',  display: true},
-        {left: '$',   right: '$',   display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
       ],
       throwOnError: false
     });"></script>
@@ -198,8 +174,8 @@
 * Voltage follower, inverting amplifier, and non-inverting amplifier circuits<br/>
 * Real-world limits: slew rate and output saturation</p>
 <h3>Before the Lecture</h3>
-<p><strong>Pre-Lecture Reading:</strong> <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
-* <a href="https://andreknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html" rel="noopener noreferrer" target="_blank">Chapter 10 — How Op-Amps Hide Complexity</a> (Section 1: Device, Feedback, and Golden Rules)</p>
+<p><strong>Pre-Lecture Reading:</strong> <a href="https://aknoesen.github.io/ECE-Emerge/Reader/ECEConfidential.html" rel="noopener noreferrer" target="_blank"><strong>ECE Confidential: Cracking The Code</strong></a><br/>
+* <a href="https://aknoesen.github.io/ECE-Emerge/Reader/OperationalAmplifiers.html" rel="noopener noreferrer" target="_blank">Chapter 10 — How Op-Amps Hide Complexity</a> (Section 1: Device, Feedback, and Golden Rules)</p>
 <hr/>
 <h3>Pre-Lecture Assessments</h3>
 <p>After completing the reading — and <strong>before attending lecture</strong> — you will take a short online quiz for each part of Chapter 10. Questions are drawn at random from a bank, so every attempt is different.</p>
@@ -229,7 +205,7 @@
 <hr/>
 <h2>Hands-On: Lab 6</h2>
 <h3>Before the Lab</h3>
-<p>Lab Assignment:** <a href="https://andreknoesen.github.io/ECE-Emerge/Lab6/htmlconversion/Lab6Instructions.html" rel="noopener noreferrer" target="_blank">Lab 6 Instructions</a></p>
+<p>Lab Assignment:** <a href="https://aknoesen.github.io/ECE-Emerge/Lab6/htmlconversion/Lab6Instructions.html" rel="noopener noreferrer" target="_blank">Lab 6 Instructions</a></p>
 <p>In Lab 6, you will build and characterize op-amp circuits on your breadboard, moving from ideal analysis to real-world observation.</p>
 <ul>
 <li><strong>Voltage Follower:</strong> Demonstrate how a buffer prevents loading and observe the gap between ideal theory and real hardware behavior.</li>
@@ -259,15 +235,6 @@
 <li><strong>Gain-bandwidth product (GBW)</strong> — the GBW relationship; calculating the −3 dB bandwidth at a chosen closed-loop gain; implications for filter design</li>
 <li><strong>Slew rate</strong> — what it is; how it differs from the GBW limit; which one governs for large-amplitude, high-frequency signals</li>
 </ul>
-<footer aria-label="License information" class="cc-footer" role="contentinfo">
-<img alt="Creative Commons Attribution-NonCommercial 4.0 International License badge" src="../media/by_nc.png"/>
-<span>
-    This work is licensed under a
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-    Please attribute this work to André Knoesen.
-  </span>
-</footer>
-
   </main>
 </body>
 </html>
