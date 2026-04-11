@@ -81,6 +81,25 @@
       color: #1a1a1a;
     }
 
+    /* ── Code blocks ── */
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #cccccc;
+      border-left: 4px solid #005a9c;
+      border-radius: 4px;
+      padding: 0.85rem 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      font-size: 0.88em;
+      color: #1a1a1a;
+    }
+
     /* ── Images ── */
     img {
       max-width: 70%;
@@ -977,66 +996,72 @@
 <p>The four waveforms measured in Part 1 (sine, square, triangle, sawtooth) will each be compared to their theoretical counterpart. The goal is to examine where agreement between theory and measurement is strong, where it breaks down, and why.</p>
 <h4>Getting <code>SignalLab</code> Class</h4>
 <ol>
-<li>Download <strong>SignalLab.m</strong> (<a href="https://ucdavis.box.com/s/gk3w1nbyqafmo13irx35ia1ziil8lqga">https://ucdavis.box.com/s/gk3w1nbyqafmo13irx35ia1ziil8lqga</a>)</li>
+<li>Download <a href="https://aknoesen.github.io/ECE-Emerge/SignalLab.m"><strong>SignalLab.m</strong></a></li>
 <li>Place the file in your working MATLAB folder, <em>or</em> add its location permanently to the MATLAB path:</li>
 </ol>
-<p><code>matlab
-addpath('C:/path/to/folder/containing/SignalLab')
-savepath</code></p>
+<pre><code class="language-matlab">addpath('C:/path/to/folder/containing/SignalLab')
+savepath
+</code></pre>
 <ol>
 <li>Verify MATLAB can find the class:</li>
 </ol>
-<p><code>matlab
-which SignalLab</code></p>
+<pre><code class="language-matlab">which SignalLab
+</code></pre>
 <p>MATLAB should respond with the full path to <code>SignalLab.m</code>. If it does not, check that the file is in the correct folder.</p>
 <ol>
-<li>A complete usage guide (<code>SignalLab_Guide</code>) is found here (<a href="https://ucdavis.box.com/s/3lgs68hcipowgcveyomcr5t7ogyxnkue">https://ucdavis.box.com/s/3lgs68hcipowgcveyomcr5t7ogyxnkue</a>)</li>
+<li>A complete usage guide <a href="https://aknoesen.github.io/ECE-Emerge/SignalLab_Guide.html"><strong>SignalLab_Guide</strong></a> is found here</li>
 </ol>
 <h4>Starter Script</h4>
 <p>The following script sets up the signal parameters and loads your first measured CSV file. Use it as your starting point and extend it to complete Tasks 2a through 2e.</p>
-<p>```matlab<br/>
-%% Lab 3 Part 2 -- Frequency Domain Analysis<br/>
-%  Complete each task below using SignalLab.<br/>
-%  Refer to the SignalLab Guide for command syntax.</p>
-<p>% --- Signal parameters (same for all waveforms) ---<br/>
-Fs = 100000;   % sampling rate: 100 kSps<br/>
-f0 = 1000;     % fundamental frequency: 1 kHz<br/>
-A  = 1;        % amplitude: 1 V</p>
-<p>s = SignalLab(A, f0, Fs);</p>
-<p>% --- Load a measured CSV file ---<br/>
-% Update the filename and path to match your saved files.<br/>
-% Your files should be named: sine_100ksps_time_ch1.csv, etc.</p>
-<p>data   = readmatrix("sine_100ksps_time_ch1.csv");<br/>
-t_meas = data(:, 1);   % time vector (s)<br/>
-x_meas = data(:, 2);   % measured voltage (V)</p>
-<p>% --- Generate the matching theoretical signal ---<br/>
-duration          = length(t_meas) / Fs;<br/>
-[t_theory, x_th]  = s.generate(duration);</p>
-<p>% --- Example: time-domain comparison for sine ---<br/>
-figure;<br/>
-plot(t_meas,   x_meas, "b-",  "LineWidth", 1.2);<br/>
-hold on;<br/>
-plot(t_theory, x_th,   "r--", "LineWidth", 1.2);<br/>
-hold off;<br/>
-xlabel("Time (s)");  ylabel("Amplitude (V)");<br/>
-legend("Measured", "Theoretical");<br/>
-title("Sine Wave -- Measured vs Theoretical");<br/>
-grid on;</p>
-<p>% -------------------------------------------------------<br/>
-% YOUR WORK STARTS HERE<br/>
-% Repeat the pattern above for square, triangle, sawtooth<br/>
-% and complete Tasks 2b through 2e.<br/>
-% -------------------------------------------------------<br/>
-```</p>
+<pre><code class="language-matlab">%% Lab 3 Part 2 -- Frequency Domain Analysis
+%  Complete each task below using SignalLab.
+%  Refer to the SignalLab Guide for command syntax.
+
+% --- Signal parameters (same for all waveforms) ---
+Fs = 100000;   % sampling rate: 100 kSps
+f0 = 1000;     % fundamental frequency: 1 kHz
+A  = 1;        % amplitude: 1 V
+
+s = SignalLab(A, f0, Fs);
+
+% --- Load a measured CSV file ---
+% Update the filename and path to match your saved files.
+% Your files should be named: sine_100ksps_time_ch1.csv, etc.
+
+data   = readmatrix("sine_100ksps_time_ch1.csv");
+t_meas = data(:, 1);   % time vector (s)
+x_meas = data(:, 2);   % measured voltage (V)
+
+% --- Generate the matching theoretical signal ---
+duration          = length(t_meas) / Fs;
+[t_theory, x_th]  = s.generate(duration);
+
+% --- Example: time-domain comparison for sine ---
+figure;
+plot(t_meas,   x_meas, "b-",  "LineWidth", 1.2);
+hold on;
+plot(t_theory, x_th,   "r--", "LineWidth", 1.2);
+hold off;
+xlabel("Time (s)");  ylabel("Amplitude (V)");
+legend("Measured", "Theoretical");
+title("Sine Wave -- Measured vs Theoretical");
+grid on;
+
+% -------------------------------------------------------
+% YOUR WORK STARTS HERE
+% Repeat the pattern above for square, triangle, sawtooth
+% and complete Tasks 2b through 2e.
+% -------------------------------------------------------
+</code></pre>
 <blockquote>
 <p><strong>WARNING</strong></p>
 <p>Always create your <code>SignalLab</code> object <em>before</em> calling <code>setWave</code>. The constructor resets all settings to their defaults. The correct order is: <strong>create</strong> the object, <strong>configure</strong> the waveform type, then <strong>generate</strong> the signal.</p>
 </blockquote>
-<p><code>matlab
-s = SignalLab(A, f0, Fs);     % 1. create
+<pre><code class="language-matlab">s = SignalLab(A, f0, Fs);     % 1. create
 s = s.setWave("square");      % 2. configure
-[t, x] = s.generate(dur);     % 3. generate</code></p>
-<h4>Tasks</h4>
+[t, x] = s.generate(dur);     % 3. generate
+</code></pre>
+<h4>Tasks  Note: These deliverables are not yet finalized and will be finalized by the end of Wednesday.</h4>
 <blockquote>
 <p><strong>Lab Deliverable #2a</strong></p>
 <p>Load the four time-domain CSV files collected in Part 1 into MATLAB. Plot the measured time-domain signal for each waveform. Each plot must include labeled axes (time in seconds, amplitude in volts) and a descriptive title. Arrange all four plots in a single figure using <code>subplot</code>. Upload the figure as an image via the course submission app. Your name must be visible in the image before uploading.</p>
